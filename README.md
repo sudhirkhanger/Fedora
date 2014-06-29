@@ -245,7 +245,7 @@ rm libQt*
 == SoundKonverter ==
 https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
 
-== SSH Key Management
+## SSH Key Management
 
 ```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
