@@ -1,29 +1,27 @@
-== Yum ==
-=== Yum Config ===
-<pre>
-sudo emacs -nw /etc/yum.conf
+=== Yum Config
+```bash
+emacs -nw /etc/yum.conf
 keepcache=1
 metadata_expire=1d
-</pre>
-=== Yum Plugins ===
-<pre>sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves</pre>
+```
 
-=== Disable Auto Update ===
-* Software Updater Widget
-* Apper
+=== Yum Plugins
+```bash
+sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
+```
 
-== Disable Nouveau ==
-<pre>
-/etc/modprobe.d/blacklist-nouveau.conf
+=== Disable Nouveau
+```bash
+emacs -nw /etc/modprobe.d/blacklist-nouveau.conf
 blacklist nouveau
-</pre>
+```
 
-<pre>
+```bash
 sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
 sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
-</pre>
+```
 
-[https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/ Ask Fedora]
+[Ask Fedora](https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/)
 
 == Google Chrome ==
 [https://www.google.com/intl/en_in/chrome/browser/ Google Chrome]
