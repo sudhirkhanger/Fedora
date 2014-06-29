@@ -254,8 +254,10 @@ ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
 ```
 
 ```
-emacs ~/.ssh/config
---------------------------------------------------------------------------------
+emacs -nw ~/.ssh/config
+```
+---
+```
       Host github
       User git
       Hostname github.com
