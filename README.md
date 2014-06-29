@@ -247,7 +247,7 @@ rm libQt*
 == SoundKonverter ==
 https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
 
-### SSH Key Management<a name="sshkey"></a>
+#### SSH Key Management<a name="sshkey"></a>
 
 ```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
@@ -255,6 +255,7 @@ ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
 
 ```
 emacs ~/.ssh/config
+-----------------------------------------------------
       Host github
       User git
       Hostname github.com
