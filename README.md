@@ -245,32 +245,33 @@ rm libQt*
 == SoundKonverter ==
 https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
 
-== ssh key ==
-<pre>
+== SSH Key Management
+
+```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
+```
 
-~/.ssh/config
-Host github                                                                                                                                                             
-     User git                                                                                                                                                           
-     Hostname github.com                                                                                                                                                
-     PreferredAuthentications publickey                                                                                                                                 
-     IdentityFile ~/.ssh/github_id_rsa
+```
+emacs ~/.ssh/config
+      Host github
+      User git
+      Hostname github.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/github_id_rsa
+```
 
-permission denied
-chmod 600 ~/.ssh/config
+Change config file permission
+`chmod 600 ~/.ssh/config`
 
-manual key management with ssh-agent
+```
+ssh-add ~/.ssh/github_id_rsa
+```
+Add ssh password in ksshaskpass by running following command in KRunner
+`ssh-add ~/.ssh/github_id_rsa`
 
-eval `ssh-agent`
-ssh-add somekeyfile
-</pre>
-
-ssh-add ~/.ssh/github_id_rsa from alt-f2 this will trigger kaskpass to prompt for password and everything will be saved graphically in your kwallet
+Add the same like to autostart also to make key get unlocked automatically
 
 https://help.github.com/articles/generating-ssh-keys
-
 http://dbushell.com/2013/01/27/multiple-accounts-and-ssh-keys/
-
 http://www.robotgoblin.co.uk/blog/2012/07/24/managing-multiple-ssh-keys/
-
 http://wiki.gentoo.org/wiki/Keychain
