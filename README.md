@@ -252,10 +252,9 @@ https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#prec
 ```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
 ```
-
-> emacs -nw ~/.ssh/config
-
 ```
+emacs -nw ~/.ssh/config
+--------------------------------------------
       Host github
       User git
       Hostname github.com
