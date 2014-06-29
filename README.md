@@ -1,4 +1,4 @@
-SSH Key(#sshkey)
+[SSH Key](#sshkey)
 
 === Yum Config
 ```bash
