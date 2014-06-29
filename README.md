@@ -1,4 +1,4 @@
-* [SSH Key](#sshkey)
+##### * [SSH Key](#sshkey)
 
 === Yum Config
 ```bash
@@ -263,17 +263,22 @@ emacs ~/.ssh/config
 ```
 
 Change config file permission
+
 `chmod 600 ~/.ssh/config`
 
 ```
 ssh-add ~/.ssh/github_id_rsa
 ```
 Add ssh password in ksshaskpass by running following command in KRunner
+
 `ssh-add ~/.ssh/github_id_rsa`
 
 Add the same like to autostart also to make key get unlocked automatically
 
 https://help.github.com/articles/generating-ssh-keys
+
 http://dbushell.com/2013/01/27/multiple-accounts-and-ssh-keys/
+
 http://www.robotgoblin.co.uk/blog/2012/07/24/managing-multiple-ssh-keys/
+
 http://wiki.gentoo.org/wiki/Keychain
