@@ -286,3 +286,11 @@ http://dbushell.com/2013/01/27/multiple-accounts-and-ssh-keys/
 http://www.robotgoblin.co.uk/blog/2012/07/24/managing-multiple-ssh-keys/
 
 http://wiki.gentoo.org/wiki/Keychain
+
+Viber
+=======
+::
+
+   ar p viber.deb data.tar.gz | tar zx
+
+`https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/`_
