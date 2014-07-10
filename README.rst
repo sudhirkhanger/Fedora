@@ -293,4 +293,4 @@ Viber
 
    ar p viber.deb data.tar.gz | tar zx
 
-`https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/`_
+`Viber <https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_
