@@ -4,17 +4,15 @@ Personal Fedora Notes
 
 * [SSH Key](#sshkey)
 
-=== Yum Config
-```bash
-emacs -nw /etc/yum.conf
-keepcache=1
-metadata_expire=1d
-```
+Yum Config
+----------
+    emacs -nw /etc/yum.conf
+    keepcache=1
+    metadata_expire=1d
 
-=== Yum Plugins
-```bash
-sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
-```
+Yum Plugins
+-----------
+    sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
 
 === Disable Nouveau
 ```bash
