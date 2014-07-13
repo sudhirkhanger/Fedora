@@ -6,26 +6,28 @@ Personal Fedora Notes
 
 Yum Config
 ----------
-    emacs -nw /etc/yum.conf
-    keepcache=1
-    metadata_expire=1d
+::
+  emacs -nw /etc/yum.conf
+  keepcache=1
+  metadata_expire=1d
 
 Yum Plugins
 -----------
-    sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
+::
+  sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
 
-=== Disable Nouveau
-```bash
-emacs -nw /etc/modprobe.d/blacklist-nouveau.conf
-blacklist nouveau
-```
+Disable Nouveau
+----------------
+::
+  emacs -nw /etc/modprobe.d/blacklist-nouveau.conf
+  blacklist nouveau
 
-```bash
-sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
-sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
-```
+::
+  sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+  sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
-[Ask Fedora](https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/)
+
+Ask Fedora https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/
 
 == Google Chrome ==
 [https://www.google.com/intl/en_in/chrome/browser/ Google Chrome]
