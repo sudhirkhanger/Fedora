@@ -1,8 +1,8 @@
-=
+======================
 Personal Fedora Notes
-=
+======================
 
-* `<SSH Key>`_(#sshkey)
+`Yum Config`_
 
 Yum Config
 ----------
