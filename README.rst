@@ -3,9 +3,11 @@ Personal Fedora Notes
 ======================
 
 `Yum Config`_
+`Yum Plugins`_
 
 Yum Config
 ----------
+
 ::
   emacs -nw /etc/yum.conf
   keepcache=1
@@ -13,16 +15,18 @@ Yum Config
 
 Yum Plugins
 -----------
+
 ::
   sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
 
 Disable Nouveau
 ----------------
+
 ::
   emacs -nw /etc/modprobe.d/blacklist-nouveau.conf
   blacklist nouveau
 
-::
+
   sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
   sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
