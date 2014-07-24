@@ -99,11 +99,11 @@ Android
   sudo nano /etc/udev/rules.d/51-android.rules
   sudo chmod a+r /etc/udev/rules.d/51-android.rules
   
-`Fedora Wiki `<https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_`_
+`Fedora Wiki `<https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
 
-`Using Hardware Devices `<http://developer.android.com/tools/device.html>`_`_
+`Using Hardware Devices `<http://developer.android.com/tools/device.html>`_
 
-`MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_`_
+`MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
 
 Thinkfan
 ---------
@@ -138,7 +138,7 @@ Media Codes
   gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
   gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
 
-`Fedy `<https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_`_
+`Fedy `<https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
 
  Bumblebee 
 
@@ -275,7 +275,7 @@ rm libQt*
  SoundKonverter 
 https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
 
-#### SSH Key Management`<a name="sshkey">`_`</a>`_
+#### SSH Key Management
 
 ```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
@@ -317,8 +317,8 @@ Viber
 
    ar p viber.deb data.tar.gz | tar zx
 
-`Ask Fedora `<https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_`_
-`Viber.com `<http://www.viber.com/>`_`_
+`Ask Fedora `<https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_
+`Viber.com `<http://www.viber.com/>`_
 
 reStructuredText
 -----------------
