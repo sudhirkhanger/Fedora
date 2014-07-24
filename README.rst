@@ -93,7 +93,7 @@ Disable Nouveau
   sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
 
-`Ask Fedora <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
+`Ask Fedora how-to-disable-nouveau-in-fedora-18 <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
 
 Google Chrome 
 -----------------
@@ -155,11 +155,11 @@ Android
   wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
   chmod a+r /etc/udev/rules.d/51-android.rules
   
-`Fedora Wiki `<https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
+`Fedora Wiki HOWTO_Setup_Android_Development <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
 
-`Using Hardware Devices `<http://developer.android.com/tools/device.html>`_
+`Using Hardware Devices <http://developer.android.com/tools/device.html>`_
 
-`MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
+`MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
 
 
 Java
@@ -257,7 +257,7 @@ Thinkfan
   sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
   
 
-Media Codes
+Media Codecs
 ------------
 
 ::
@@ -268,13 +268,13 @@ Media Codes
   gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
   
 
-`Fedy `<https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
+`Fedy <https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
 
 
 Bumblebee
 -----------
 
-`<https://fedoraproject.org/wiki/Bumblebee Fedora Wiki>`_
+`Fedora Wiki Bumblebee <https://fedoraproject.org/wiki/Bumblebee>`_
 
 
 Moka Icon Theme
@@ -317,12 +317,13 @@ ksuperkey
 
   ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
 
-`Github <https://github.com/hanschen/ksuperkey>`_
+`Github hanschen <https://github.com/hanschen/ksuperkey>`_
 
 TLP
 -------
 
 - Configure Repo
+
 ::
   
   yum localinstall --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
@@ -370,7 +371,7 @@ VirtualBox
 HandBrake 
 ------------
 
-`Negativo17 <http://negativo17.org/handbrake/>`_
+`Negativo17 HandBrake <http://negativo17.org/handbrake/>`_
 
 Skype
 -------
@@ -384,7 +385,7 @@ Skype
   
 - Follow Negativo17's post.
 
-`Negativo17 <http://negativo17.org/skype-and-skype-pidgin-plugin/>`_
+`Negativo17 Skype <http://negativo17.org/skype-and-skype-pidgin-plugin/>`_
 
 `Skype.com <https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux>`_
 
@@ -427,14 +428,14 @@ Caffeine
 
 `My blog <http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/>`_
 
-`OBS <http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine>`_
+`OBS zhonghuaren <http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine>`_
 
 Gnome Encfs Manager
 --------------------
 
 `libertyzero.com <http://www.libertyzero.com/GEncfsM/>`_
 
-`OBS <http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager>`_
+`OBS moritzmolch <http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager>`_
 
 
 
@@ -452,7 +453,7 @@ Genymotion
 SoundKonverter
 --------------
 
-`Github <https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages>`_
+`Github HessiJames <https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages>`_
 
 SSH Key Management
 ---------------------
@@ -499,8 +500,8 @@ Viber
 
    ar p viber.deb data.tar.gz | tar zx
 
-`Ask Fedora `<https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_
-`Viber.com `<http://www.viber.com/>`_
+`Ask Fedora viber-on-fedora <https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_
+`Viber.com <http://www.viber.com/>`_
 
 reStructuredText
 -----------------
