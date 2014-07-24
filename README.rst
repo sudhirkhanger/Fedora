@@ -14,19 +14,6 @@ Modify the following file ``/etc/yum.conf``
 
 ::
 
-  /etc/yum.conf
-  --------------
-  keepcache=1
-  
-::
-
-  /etc/yum.conf
------------------
-  keepcache=1
-  
-
-::
-
   keepcache=1
 
 Yum Plugins
