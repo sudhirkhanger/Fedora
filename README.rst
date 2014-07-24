@@ -2,8 +2,9 @@
 Personal Fedora Notes
 ======================
 
-`Yum Config`_
-`Yum Plugins`_
+1. `Yum Config`_
+
+2. `Yum Plugins`_
 
 Yum Config
 ----------
