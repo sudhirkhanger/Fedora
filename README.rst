@@ -105,31 +105,40 @@ Android
 
 `MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
 
-== Thinkfan ==
-<pre>
-sudo yum install thinkfan
-sudo systemctl enable thinkfan
+Thinkfan
+---------
 
-nano /etc/thinkfan.conf
+- Install and enable systemd file
 
-find /sys/devices -type f -name "temp*_input"
+::
 
-sensor /sys/devices/virtual/hwmon/hwmon0/temp1_input
-sensor /sys/devices/platform/coretemp.0/temp3_input
-sensor /sys/devices/platform/coretemp.0/temp1_input
-sensor /sys/devices/platform/coretemp.0/temp2_input
+  sudo yum install thinkfan
+  sudo systemctl enable thinkfan
 
-</pre>
+- Modify config ``/etc/thinkfan.conf``
+Add output of following appening ``sensors`` before the command
 
-== Media Codes ==
-<pre> 
-sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
-gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
-gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
-gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
-</pre>
+::
 
-[https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh Fedy]
+  find /sys/devices -type f -name "temp*_input"
+  
+  sensor /sys/devices/virtual/hwmon/hwmon0/temp1_input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+  
+
+Media Codes
+------------
+
+::
+
+  sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
+  gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
+  gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
+  gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
+
+`Fedy <https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
 
 == Bumblebee ==
 
