@@ -1,8 +1,8 @@
-=========================
+=
 Personal Fedora Notes
-=========================
+=
 
-* [SSH Key](#sshkey)
+* `<SSH Key>`_(#sshkey)
 
 Yum Config
 ----------
@@ -29,18 +29,18 @@ Disable Nouveau
 
 Ask Fedora https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/
 
-== Google Chrome ==
-[https://www.google.com/intl/en_in/chrome/browser/ Google Chrome]
+ Google Chrome 
+`<https://www.google.com/intl/en_in/chrome/browser/ Google Chrome>`_
 
-[https://www.google.com/tools/dlpage/hangoutplugin Google Talk Plugin]
+`<https://www.google.com/tools/dlpage/hangoutplugin Google Talk Plugin>`_
 
-== RPM Fusion ==
-<pre>
+ RPM Fusion 
+::
 su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
 
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'</pre>
+http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
-[http://rpmfusion.org/Configuration RPM Fusion]
+`<http://rpmfusion.org/Configuration RPM Fusion>`_
 
 Android
 --------
@@ -99,11 +99,11 @@ Android
   sudo nano /etc/udev/rules.d/51-android.rules
   sudo chmod a+r /etc/udev/rules.d/51-android.rules
   
-`Fedora Wiki <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
+`Fedora Wiki `<https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_`_
 
-`Using Hardware Devices <http://developer.android.com/tools/device.html>`_
+`Using Hardware Devices `<http://developer.android.com/tools/device.html>`_`_
 
-`MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
+`MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_`_
 
 Thinkfan
 ---------
@@ -138,67 +138,68 @@ Media Codes
   gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
   gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
 
-`Fedy <https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
+`Fedy `<https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_`_
 
-== Bumblebee ==
+ Bumblebee 
 
-[https://fedoraproject.org/wiki/Bumblebee Fedora Wiki]
+`<https://fedoraproject.org/wiki/Bumblebee Fedora Wiki>`_
 
-== Moka Icon Theme ==
+ Moka Icon Theme 
 
-<pre>
+::
 sudo wget http://download.opensuse.org/repositories/home:/snwh:/moka-icon-theme/Fedora_20/home:snwh:moka-icon-theme.repo -O /etc/yum.repos.d/moka-icon-theme.repo
 sudo yum update
 sudo yum install moka-icon-theme
-</pre>
 
-[http://mokaproject.com/moka-icon-theme/download/fedora/ Moka Project]
+
+`<http://mokaproject.com/moka-icon-theme/download/fedora/ Moka Project>`_
 
 Dropbox
 --------
 
 ::
+
   cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   ~/.dropbox-dist/dropboxd
 
-== ksuperkey ==
+ ksuperkey 
  https://github.com/hanschen/ksuperkey
-<pre>
+::
 sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
 git clone https://github.com/hanschen/ksuperkey.git
 cd ksuperkey
 make
 sudo make install
 ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
-</pre>
 
-== tlp ==
-<pre>
+
+ tlp 
+::
 yum localinstall --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
 yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
-sudo yum install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel</pre>
+sudo yum install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel
 
-[http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation Linrunner]
+`<http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation Linrunner>`_
 
-== VirtualBox ==
-[http://www.fedoraonline.se/install-oracle-vm-virtualbox-fedora-20/ Oracle]
+ VirtualBox 
+`<http://www.fedoraonline.se/install-oracle-vm-virtualbox-fedora-20/ Oracle>`_
 
-== HandBrake ==
-[http://negativo17.org/handbrake/ Negativo17]
+ HandBrake 
+`<http://negativo17.org/handbrake/ Negativo17>`_
 
-== Skype ==
-<pre>
+ Skype 
+::
 sudo yum -y install libXv.i686 libXScrnSaver.i686 qt.i686 qt-x11.i686 pulseaudio-libs.i686 \
 pulseaudio-libs-glib2.i686 alsa-plugins-pulseaudio.i686 qtwebkit.i686
-</pre>
 
-[http://negativo17.org/skype-and-skype-pidgin-plugin/ Negativo17]
 
-[https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux Skype.com]
+`<http://negativo17.org/skype-and-skype-pidgin-plugin/ Negativo17>`_
 
-== RedShift KDE Widget ==
-<pre>
+`<https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux Skype.com>`_
+
+ RedShift KDE Widget 
+::
 sudo yum group install "C Development Tools and Libraries"
 sudo yum install cmake kde-workspace-devel redshift-gtk
 mkdir build
@@ -206,38 +207,38 @@ cd build
 cmake -DCMAKE_INSTALL_PREFIX=$(kde4-config --prefix) ..
 make
 sudo make install
-</pre>
 
-[http://kde-apps.org/content/show.php/Redshift+Plasmoid?content=148737 kde-apps.org]
 
-== Dropbox Dolphin Integration ==
-<pre>
+`<http://kde-apps.org/content/show.php/Redshift+Plasmoid?content=148737 kde-apps.org>`_
+
+ Dropbox Dolphin Integration 
+::
 sudo yum install kde-baseapps-devel
 git clone git://anongit.kde.org/scratch/trichard/dolphin-box-plugin
 cd dolphin-box-plugin
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release .
 make
 sudo make install
-</pre>
 
-[http://trichard-kde.blogspot.in/2010/12/introducing-dropbox-integration-for.html trichard-kde.blogspot.in]
 
-[https://aur.archlinux.org/packages/do/dolphin-box-plugin-git/PKGBUILD AUR]
+`<http://trichard-kde.blogspot.in/2010/12/introducing-dropbox-integration-for.html trichard-kde.blogspot.in>`_
 
-== Caffeine == 
-[http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/ My Blog]
+`<https://aur.archlinux.org/packages/do/dolphin-box-plugin-git/PKGBUILD AUR>`_
 
-[http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine OBS]
+ Caffeine  
+`<http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/ My Blog>`_
 
-== Gnome Encfs Manager ==
+`<http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine OBS>`_
 
-[http://www.libertyzero.com/GEncfsM/ libertyzero.com]
+ Gnome Encfs Manager 
 
-[http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager OBS]
+`<http://www.libertyzero.com/GEncfsM/ libertyzero.com>`_
 
-== Java ==
-<pre>
-rpm -Uvh jdk-7u<version>-linux-x64.rpm
+`<http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager OBS>`_
+
+ Java 
+::
+rpm -Uvh jdk-7u`<version>`_-linux-x64.rpm
 
 alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
 alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
@@ -253,28 +254,28 @@ alternatives --config jar
 
 export JAVA_HOME=/usr/java/default/
 export PATH=$JAVA_HOME/bin:$PATH
-</pre>
 
-[http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm Oracle Docs]
 
-[http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/ if-not-true-then-false.com]
+`<http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm Oracle Docs>`_
 
-[http://forums.fedoraforum.org/showthread.php?t=297016 FedoraForums]
+`<http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/ if-not-true-then-false.com>`_
 
-[http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html johngoltzer]
+`<http://forums.fedoraforum.org/showthread.php?t=297016 FedoraForums>`_
 
-== Genymotion ==
-<pre>
+`<http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html johngoltzer>`_
+
+ Genymotion 
+::
 ./genymotion-2.2.1_x64.bin
 mkdir /home/donnie/.Genymobile
 touch /home/donnie/.Genymobile/genymotion.log
 rm libQt*
-</pre>
 
-== SoundKonverter ==
+
+ SoundKonverter 
 https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
 
-#### SSH Key Management<a name="sshkey"></a>
+#### SSH Key Management`<a name="sshkey">`_`</a>`_
 
 ```
 ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
@@ -311,13 +312,13 @@ http://www.robotgoblin.co.uk/blog/2012/07/24/managing-multiple-ssh-keys/
 http://wiki.gentoo.org/wiki/Keychain
 
 Viber
-=======
+=
 ::
 
    ar p viber.deb data.tar.gz | tar zx
 
-`Ask Fedora <https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_
-`Viber.com <http://www.viber.com/>`_
+`Ask Fedora `<https://ask.fedoraproject.org/en/question/45112/viber-on-fedora/>`_`_
+`Viber.com `<http://www.viber.com/>`_`_
 
 reStructuredText
 -----------------
