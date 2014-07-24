@@ -100,7 +100,9 @@ Android
   sudo chmod a+r /etc/udev/rules.d/51-android.rules
   
 `Fedora Wiki <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
+
 `Using Hardware Devices <http://developer.android.com/tools/device.html>`_
+
 `MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
 
 Thinkfan
@@ -152,11 +154,12 @@ sudo yum install moka-icon-theme
 
 [http://mokaproject.com/moka-icon-theme/download/fedora/ Moka Project]
 
-== Dropbox ==
-<pre>
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
-</pre>
+Dropbox
+--------
+
+::
+  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  ~/.dropbox-dist/dropboxd
 
 == ksuperkey ==
  https://github.com/hanschen/ksuperkey
