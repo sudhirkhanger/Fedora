@@ -8,6 +8,53 @@ Personal Fedora Notes
 
 3. `Disable Nouveau`_
 
+4. `Google Chrome`_
+
+5. `RPM Fusion`_
+
+6. `Android`_
+
+7. `Java`_
+
+8. `Thinkfan`_
+
+9. `Media Codecs`_
+
+10. `Bumblebee`_
+
+11. `Moka Icon Theme`_
+
+12. `Dropbox`_
+
+13. `ksuperkey`_
+
+14. `TLP`_
+
+15. `VirtualBox`_
+
+16. `HandBrake`_
+
+17. `Skype`_
+
+18. `RedShift Plasma Widget`_
+
+19. `Dropbox-Dolphin Integration`_
+
+20. `Caffeine`_
+
+21. `Gnome Encfs Manager`_
+
+22. `Genymotion`_
+
+23. `SoundKonverter`_
+
+24. `SSH Key Management`_
+
+25. `reStructuredText`_
+
+26. `Viber`_
+
+
 Yum Config
 ----------
 
@@ -46,10 +93,10 @@ Disable Nouveau
   sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
 
-`<https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
+`Ask Fedora <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
 
 Google Chrome 
- -----------------
+-----------------
  
 `Chrome <https://www.google.com/intl/en_in/chrome/browser/>`_
  
@@ -90,7 +137,9 @@ Android
 - Set Android SDK Path
 
 ::
-
+  
+  ~/.bashrc
+  -----------------------------------------------------
   PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
   export PATH
 
@@ -102,15 +151,16 @@ Android
 
 ::
 
-  sudo touch /etc/udev/rules.d/51-android.rules
-  sudo nano /etc/udev/rules.d/51-android.rules
-  sudo chmod a+r /etc/udev/rules.d/51-android.rules
+  cd /etc/udev/rules.d
+  wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+  chmod a+r /etc/udev/rules.d/51-android.rules
   
 `Fedora Wiki `<https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
 
 `Using Hardware Devices `<http://developer.android.com/tools/device.html>`_
 
 `MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
+
 
 Java
 -----
@@ -121,6 +171,7 @@ Java
 
   sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
 
+
 - Install Oracle Java 6
 
 ::
@@ -128,6 +179,7 @@ Java
   sudo su
   sh jdk-6u45-linux-x64-rpm.bin
   
+
 - Install Oracle Java 7
 
 ::
@@ -172,13 +224,13 @@ If upgrading
   alternatives --config jar
 
 
-`<http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm>`_
+`Oracle Docs <http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm>`_
 
-`<http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/>`_
+`if-not-true-then-false.com <http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/>`_
 
-`<http://forums.fedoraforum.org/showthread.php?t=297016>`_
+`Fedora Forums <http://forums.fedoraforum.org/showthread.php?t=297016>`_
 
-`<http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html>`_
+`John Goltzer Blogspot <http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html>`_
 
 
 Thinkfan
@@ -191,13 +243,14 @@ Thinkfan
   sudo yum install thinkfan
   sudo systemctl enable thinkfan
 
-- Modify config ``/etc/thinkfan.conf``
-Add output of following appening ``sensors`` before the command
+- Modify config and add output of following command to it prefixing with ``sensors``
 
 ::
 
   find /sys/devices -type f -name "temp*_input"
   
+  /etc/thinkfan.conf
+  ---------------------------------------------------------------
   sensor /sys/devices/virtual/hwmon/hwmon0/temp1_input
   sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
   sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
@@ -213,30 +266,37 @@ Media Codes
   gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
   gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
   gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
+  
 
 `Fedy `<https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
 
- Bumblebee 
+
+Bumblebee
+-----------
 
 `<https://fedoraproject.org/wiki/Bumblebee Fedora Wiki>`_
 
- Moka Icon Theme 
+
+Moka Icon Theme
+-------------------
 
 ::
-sudo wget http://download.opensuse.org/repositories/home:/snwh:/moka-icon-theme/Fedora_20/home:snwh:moka-icon-theme.repo -O /etc/yum.repos.d/moka-icon-theme.repo
-sudo yum update
-sudo yum install moka-icon-theme
+
+  sudo wget http://download.opensuse.org/repositories/home:/snwh:/moka-icon-theme/Fedora_20/home:snwh:moka-icon-theme.repo -O /etc/yum.repos.d/moka-icon-theme.repo
+  sudo yum update && sudo yum install moka-icon-theme
 
 
-`<http://mokaproject.com/moka-icon-theme/download/fedora/ Moka Project>`_
+`Moka Project <http://mokaproject.com/moka-icon-theme/download/fedora/>`_
+
 
 Dropbox
 --------
 
 ::
-
-  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  
+    cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   ~/.dropbox-dist/dropboxd
+  
 
 ksuperkey
 ----------
@@ -257,109 +317,171 @@ ksuperkey
 
   ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
 
-https://github.com/hanschen/ksuperkey
+`Github <https://github.com/hanschen/ksuperkey>`_
 
- tlp 
+TLP
+-------
+
+- Configure Repo
 ::
-yum localinstall --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+  
+  yum localinstall --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
+  yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
-sudo yum install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel
+- Installation
 
-`<http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation Linrunner>`_
-
- VirtualBox 
-`<http://www.fedoraonline.se/install-oracle-vm-virtualbox-fedora-20/ Oracle>`_
-
- HandBrake 
-`<http://negativo17.org/handbrake/ Negativo17>`_
-
- Skype 
 ::
-sudo yum -y install libXv.i686 libXScrnSaver.i686 qt.i686 qt-x11.i686 pulseaudio-libs.i686 \
-pulseaudio-libs-glib2.i686 alsa-plugins-pulseaudio.i686 qtwebkit.i686
+  
+  sudo yum install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel
+
+`Linrunner.de <http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation Linrunner>`_
 
 
-`<http://negativo17.org/skype-and-skype-pidgin-plugin/ Negativo17>`_
+VirtualBox
+-----------
 
-`<https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux Skype.com>`_
+- Configure Repo
 
- RedShift KDE Widget 
 ::
-sudo yum group install "C Development Tools and Libraries"
-sudo yum install cmake kde-workspace-devel redshift-gtk
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=$(kde4-config --prefix) ..
-make
-sudo make install
 
+  cd /etc/yum.repos.d/
+  wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+  
+- Installation
 
-`<http://kde-apps.org/content/show.php/Redshift+Plasmoid?content=148737 kde-apps.org>`_
-
- Dropbox Dolphin Integration 
 ::
-sudo yum install kde-baseapps-devel
-git clone git://anongit.kde.org/scratch/trichard/dolphin-box-plugin
-cd dolphin-box-plugin
-cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release .
-make
-sudo make install
 
+  yum install binutils gcc make patch libgomp glibc-headers glibc-devel \
+  kernel-headers kernel-devel dkms VirtualBox-4.3
+  
+- Setup
 
-`<http://trichard-kde.blogspot.in/2010/12/introducing-dropbox-integration-for.html trichard-kde.blogspot.in>`_
-
-`<https://aur.archlinux.org/packages/do/dolphin-box-plugin-git/PKGBUILD AUR>`_
-
- Caffeine  
-`<http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/ My Blog>`_
-
-`<http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine OBS>`_
-
- Gnome Encfs Manager 
-
-`<http://www.libertyzero.com/GEncfsM/ libertyzero.com>`_
-
-`<http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager OBS>`_
-
-
-
- Genymotion 
 ::
-./genymotion-2.2.1_x64.bin
-mkdir /home/donnie/.Genymobile
-touch /home/donnie/.Genymobile/genymotion.log
-rm libQt*
+
+  /etc/init.d/vboxdrv setup
+  usermod -a -G vboxusers $USER
+  
+
+`Fedoraonline.se <http://www.fedoraonline.se/install-oracle-vm-virtualbox-fedora-20/>`_
+
+`Oracle <https://www.virtualbox.org/wiki/Linux_Downloads>`_
 
 
- SoundKonverter 
-https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages
+HandBrake 
+------------
 
-#### SSH Key Management
+`Negativo17 <http://negativo17.org/handbrake/>`_
 
-```
-ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
-```
-```
-emacs -nw ~/.ssh/config
---------------------------------------------
-      Host github
-      User git
-      Hostname github.com
-      PreferredAuthentications publickey
-      IdentityFile ~/.ssh/github_id_rsa
-```
+Skype
+-------
 
-Change config file permission
+- 32-bit Libraries for 64-bit systems
 
-`chmod 600 ~/.ssh/config`
+::
 
-```
-ssh-add ~/.ssh/github_id_rsa
-```
+  sudo yum -y install libXv.i686 libXScrnSaver.i686 qt.i686 qt-x11.i686 pulseaudio-libs.i686 \
+  pulseaudio-libs-glib2.i686 alsa-plugins-pulseaudio.i686 qtwebkit.i686
+  
+- Follow Negativo17's post.
+
+`Negativo17 <http://negativo17.org/skype-and-skype-pidgin-plugin/>`_
+
+`Skype.com <https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux>`_
+
+RedShift Plasma Widget
+----------------------
+
+::
+
+  sudo yum group install "C Development Tools and Libraries"
+  sudo yum install cmake kde-workspace-devel redshift-gtk
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX=$(kde4-config --prefix) ..
+  make
+  sudo make install
+
+
+`kde-apps.org <http://kde-apps.org/content/show.php/Redshift+Plasmoid?content=148737>`_
+
+
+Dropbox-Dolphin Integration
+---------------------------
+
+::
+
+  sudo yum install kde-baseapps-devel
+  git clone git://anongit.kde.org/scratch/trichard/dolphin-box-plugin
+  cd dolphin-box-plugin
+  cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release .
+  make
+  sudo make install
+
+
+`trichard-kde.blogspot.in <http://trichard-kde.blogspot.in/2010/12/introducing-dropbox-integration-for.html>`_
+
+`aur.archlinux.org <https://aur.archlinux.org/packages/do/dolphin-box-plugin-git/PKGBUILD AUR>`_
+
+Caffeine
+---------
+
+`My blog <http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/>`_
+
+`OBS <http://software.opensuse.org/download.html?project=home%3Azhonghuaren&package=caffeine>`_
+
+Gnome Encfs Manager
+--------------------
+
+`libertyzero.com <http://www.libertyzero.com/GEncfsM/>`_
+
+`OBS <http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager>`_
+
+
+
+Genymotion
+------------
+
+::
+
+  ./genymotion-2.2.1_x64.bin
+  mkdir /home/donnie/.Genymobile
+  touch /home/donnie/.Genymobile/genymotion.log
+  rm libQt*
+
+
+SoundKonverter
+--------------
+
+`Github <https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages>`_
+
+SSH Key Management
+---------------------
+
+::
+
+  ssh-keygen -t rsa -f ~/.ssh/github_id_rsa -C "your_email@youremail.com"
+
+  ~/.ssh/config
+  --------------------------------------------
+  Host github
+  User git
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github_id_rsa
+
+- Change config file permission
+
+::
+
+  chmod 600 ~/.ssh/config
+  
+  ssh-add ~/.ssh/github_id_rsa
+
 Add ssh password in ksshaskpass by running following command in KRunner
 
-`ssh-add ~/.ssh/github_id_rsa`
+::
+  
+  ssh-add ~/.ssh/github_id_rsa`
 
 Add the same like to autostart also to make key get unlocked automatically
 
@@ -372,7 +494,7 @@ http://www.robotgoblin.co.uk/blog/2012/07/24/managing-multiple-ssh-keys/
 http://wiki.gentoo.org/wiki/Keychain
 
 Viber
-=
+------
 ::
 
    ar p viber.deb data.tar.gz | tar zx
