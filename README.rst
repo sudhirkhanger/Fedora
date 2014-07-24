@@ -35,43 +35,31 @@ Disable Nouveau
   sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
 
-Ask Fedora https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/
+`Ask Fedora <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
 
- Google Chrome 
-`<https://www.google.com/intl/en_in/chrome/browser/ Google Chrome>`_
+Google Chrome 
+ -----------------
+ 
+`Chrome <https://www.google.com/intl/en_in/chrome/browser/>`_
+ 
+`Hangouts Plugin <https://www.google.com/tools/dlpage/hangoutplugin>`_
 
-`<https://www.google.com/tools/dlpage/hangoutplugin Google Talk Plugin>`_
-
- RPM Fusion 
+RPM Fusion
+------------
+ 
 ::
-su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
 
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+  su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+  http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
-`<http://rpmfusion.org/Configuration RPM Fusion>`_
+
+`RPMFusion <http://rpmfusion.org/Configuration>`_
 
 Android
 --------
 
-- Install Java
+- Install `Java`_
 
-::
-
-    sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
-
-- Instal Oracle Java
-
-::
-  
-  su -
-  sh jdk-6u45-linux-x64-rpm.bin
-
-- Set Java Path
-
-::
-
-  export JAVA_HOME=/usr/java/jdk1.6.0_45/
-  export PATH=$JAVA_HOME/bin:$PATH
 
 - Android SDK Dependencies
 
@@ -112,6 +100,75 @@ Android
 `Using Hardware Devices `<http://developer.android.com/tools/device.html>`_
 
 `MORf30 Github `<https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
+
+Java
+-----
+
+- Install OpenJDK
+
+::
+
+  sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
+
+- Install Oracle Java 6
+
+::
+
+  sudo su
+  sh jdk-6u45-linux-x64-rpm.bin
+  
+- Install Oracle Java 7
+
+::
+  
+  sudo su
+  rpm -ivh jdk-7u60-linux-x64.rpm
+  
+If upgrading
+
+::
+  
+  rpm -Uvh jdk-7u60-linux-x64.rpm
+
+- Set Java Path for JDK 6
+
+::
+
+  export JAVA_HOME=/usr/java/jdk1.6.0_45/
+  export PATH=$JAVA_HOME/bin:$PATH
+  
+- Set Java Path for JDK 7
+
+::
+  
+  export JAVA_HOME=/usr/java/default/
+  export PATH=$JAVA_HOME/bin:$PATH
+  
+- Set Alternatives
+
+::
+
+  alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
+  alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
+  alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
+  alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
+  alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
+
+  alternatives --config java
+  alternatives --config javaws
+  alternatives --config libjavaplugin.so.x86_64
+  alternatives --config javac
+  alternatives --config jar
+
+
+`<http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm>`_
+
+`<http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/>`_
+
+`<http://forums.fedoraforum.org/showthread.php?t=297016>`_
+
+`<http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html>`_
+
 
 Thinkfan
 ---------
@@ -254,33 +311,7 @@ sudo make install
 
 `<http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager OBS>`_
 
- Java 
-::
-rpm -Uvh jdk-7u`<version>`_-linux-x64.rpm
 
-alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
-alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
-alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
-alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
-alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
-
-alternatives --config java
-alternatives --config javaws
-alternatives --config libjavaplugin.so.x86_64
-alternatives --config javac
-alternatives --config jar
-
-export JAVA_HOME=/usr/java/default/
-export PATH=$JAVA_HOME/bin:$PATH
-
-
-`<http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm Oracle Docs>`_
-
-`<http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/ if-not-true-then-false.com>`_
-
-`<http://forums.fedoraforum.org/showthread.php?t=297016 FedoraForums>`_
-
-`<http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html johngoltzer>`_
 
  Genymotion 
 ::
