@@ -8,15 +8,18 @@ Personal Fedora Notes
 Yum Config
 ----------
 
+- Keep Cache
+Modify the following file ``/etc/yum.conf``
+
 ::
-  emacs -nw /etc/yum.conf
+
   keepcache=1
-  metadata_expire=1d
 
 Yum Plugins
 -----------
 
 ::
+
   sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
 
 Disable Nouveau
