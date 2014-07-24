@@ -45,15 +45,14 @@ http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E
 Android
 --------
 
-- Install Java
-::
+- Install Java::
   sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
 
-::
+- Instal Oracle Java::
   su -
   sh jdk-6u45-linux-x64-rpm.bin
 
-::
+- Set Path::
   export JAVA_HOME=/usr/java/jdk1.6.0_45/
   export PATH=$JAVA_HOME/bin:$PATH
 
