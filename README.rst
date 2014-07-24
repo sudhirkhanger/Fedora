@@ -6,14 +6,17 @@ Personal Fedora Notes
 
 2. `Yum Plugins`_
 
+3. `Disable Nouveau`_
+
 Yum Config
 ----------
 
 - Keep Cache
-Modify the following file ``/etc/yum.conf``
 
 ::
 
+  /etc/yum.conf
+  ------------------------
   keepcache=1
 
 Yum Plugins
@@ -21,21 +24,29 @@ Yum Plugins
 
 ::
 
-  sudo yum install yum-plugin-fastestmirror yum-plugin-local yum-plugin-changelog yum-plugin-show-leaves
+  sudo yum install yum-plugin-fastestmirror yum-plugin-local \
+  yum-plugin-changelog yum-plugin-show-leaves
 
 Disable Nouveau
 ----------------
 
+- Blacklist ``nouveau`` module
+
 ::
-  emacs -nw /etc/modprobe.d/blacklist-nouveau.conf
+
+  /etc/modprobe.d/blacklist-nouveau.conf
+  -------------------------------------------------------
   blacklist nouveau
 
+- Recreate initramfs
+
+::
 
   sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
   sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
 
-`Ask Fedora <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
+`<https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
 
 Google Chrome 
  -----------------
