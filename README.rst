@@ -170,16 +170,26 @@ Dropbox
   cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   ~/.dropbox-dist/dropboxd
 
- ksuperkey 
- https://github.com/hanschen/ksuperkey
-::
-sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
-git clone https://github.com/hanschen/ksuperkey.git
-cd ksuperkey
-make
-sudo make install
-ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
+ksuperkey
+----------
 
+- Installation
+
+::
+  
+  sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
+  git clone https://github.com/hanschen/ksuperkey.git
+  cd ksuperkey
+  make
+  sudo make install
+  
+- Autostart
+
+::
+
+  ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
+
+https://github.com/hanschen/ksuperkey
 
  tlp 
 ::
