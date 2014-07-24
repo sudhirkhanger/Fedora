@@ -72,13 +72,17 @@ Android
   sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
   ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
 
-- Android Build Dependencies::
+- Android Build Dependencies
+
+::
 
   sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
   zlib-devel.{x86_64,i686} ncurses-devel.i686 libsx-devel readline-devel.i686 \
   perl-Switch
 
-- Set Android SDK Path::
+- Set Android SDK Path
+
+::
 
   PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
   export PATH
@@ -87,7 +91,9 @@ Android
   PATH=$PATH:$HOME/AndroidSDK/platform-tools
   export PATH
 
-- ``udev`` rule::
+- ``udev`` rule
+
+::
 
   sudo touch /etc/udev/rules.d/51-android.rules
   sudo nano /etc/udev/rules.d/51-android.rules
@@ -95,11 +101,9 @@ Android
   
 `Fedora Wiki <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
 
-[https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development Fedora Wiki]
+`Using Hardware Devices <http://developer.android.com/tools/device.html>`_
 
-[https://developer.android.com/tools/device.html#setting-up Android Hardware]
-
-[https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules android-udev]
+`MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
 
 == Thinkfan ==
 <pre>
