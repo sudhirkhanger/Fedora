@@ -58,39 +58,42 @@ Android
   su -
   sh jdk-6u45-linux-x64-rpm.bin
 
-- Set Path
+- Set Java Path
 
 ::
 
   export JAVA_HOME=/usr/java/jdk1.6.0_45/
   export PATH=$JAVA_HOME/bin:$PATH
 
-Android SDK Dependencies
-<pre>
-sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686
-libXrender.i686 libXrandr.i686
-</pre>
+- Android SDK Dependencies
 
-Android Build Dependencies
-<pre>
-sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} zlib-devel.{x86_64,i686} ncurses-devel.i686 libsx-devel
-readline-devel.i686 perl-Switch
-</pre>
+::
 
-<pre>
-PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
-export PATH
+  sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
+  ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
 
-# For SDK version r_08 and higher, also add this for adb:
-PATH=$PATH:$HOME/AndroidSDK/platform-tools
-export PATH
-</pre>
+- Android Build Dependencies::
 
-<pre>
-sudo touch /etc/udev/rules.d/51-android.rules
-sudo nano /etc/udev/rules.d/51-android.rules
-sudo chmod a+r /etc/udev/rules.d/51-android.rules
-</pre>
+  sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
+  zlib-devel.{x86_64,i686} ncurses-devel.i686 libsx-devel readline-devel.i686 \
+  perl-Switch
+
+- Set Android SDK Path::
+
+  PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
+  export PATH
+
+  # For SDK version r_08 and higher, also add this for adb:
+  PATH=$PATH:$HOME/AndroidSDK/platform-tools
+  export PATH
+
+- ``udev`` rule::
+
+  sudo touch /etc/udev/rules.d/51-android.rules
+  sudo nano /etc/udev/rules.d/51-android.rules
+  sudo chmod a+r /etc/udev/rules.d/51-android.rules
+  
+`Fedora Wiki <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
 
 [https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development Fedora Wiki]
 
