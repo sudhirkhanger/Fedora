@@ -42,22 +42,20 @@ http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E
 
 [http://rpmfusion.org/Configuration RPM Fusion]
 
-== Android ==
+Android
+--------
 
-Install Java
-<pre>
-sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
-</pre>
+- Install Java
+::
+  sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
 
-<pre>
-sudo su
-sh jdk-6u45-linux-x64-rpm.bin
-</pre>
+::
+  su -
+  sh jdk-6u45-linux-x64-rpm.bin
 
-<pre>
-export JAVA_HOME=/usr/java/jdk1.6.0_45/
-export PATH=$JAVA_HOME/bin:$PATH
-</pre>
+::
+  export JAVA_HOME=/usr/java/jdk1.6.0_45/
+  export PATH=$JAVA_HOME/bin:$PATH
 
 Android SDK Dependencies
 <pre>
