@@ -65,6 +65,7 @@ Yum Config
   /etc/yum.conf
   ------------------------
   keepcache=1
+  clean_requirements_on_remove=1
 
 Yum Plugins
 -----------
@@ -73,8 +74,6 @@ Yum Plugins
 
   sudo yum install yum-plugin-fastestmirror yum-plugin-local \
   yum-plugin-changelog yum-plugin-show-leaves
-
-.. decide which one do you prefer clean_requirements_on_remove=1 or yum-plugin-remove-with-leaves
 
 Disable Nouveau
 ----------------
