@@ -516,3 +516,5 @@ Microsoft Core Fonts
 ::
 
     sudo yum install msttcore-fonts-installer-2.6-1.noarch.rpm
+    
+http://sourceforge.net/projects/mscorefonts2/?source=typ_redirect
