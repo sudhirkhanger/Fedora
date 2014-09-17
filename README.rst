@@ -54,6 +54,8 @@ Personal Fedora Notes
 
 26. `Viber`_
 
+27. `Microsoft Core Fonts`_
+
 
 Yum Config
 ----------
@@ -82,9 +84,7 @@ Disable Nouveau
 
 ::
 
-  /etc/modprobe.d/blacklist-nouveau.conf
-  -------------------------------------------------------
-  blacklist nouveau
+  echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist-nouveau.conf
 
 - Recreate initramfs
 
@@ -132,8 +132,7 @@ Android
 ::
 
   sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
-  zlib-devel.{x86_64,i686} ncurses-devel.i686 libsx-devel readline-devel.i686 \
-  perl-Switch
+  zlib-devel.{x86_64,i686} ncurses-devel.i686 readline-devel.i686 perl-Switch
 
 - Set Android SDK Path
 
@@ -510,3 +509,10 @@ reStructuredText
 ::
 
   sudo yum install python-docutils python-sphinx
+  
+Microsoft Core Fonts
+---------------------
+
+::
+
+    sudo yum install msttcore-fonts-installer-2.6-1.noarch.rpm
