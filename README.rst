@@ -56,6 +56,8 @@ Personal Fedora Notes
 
 27. `Microsoft Core Fonts`_
 
+28. `Create A Yum Repository`_
+
 
 Yum Config
 ----------
@@ -518,3 +520,46 @@ Microsoft Core Fonts
     sudo yum install msttcore-fonts-installer-2.6-1.noarch.rpm
     
 http://sourceforge.net/projects/mscorefonts2/?source=typ_redirect
+
+Create A Yum Repository
+------------------------
+
+::
+
+    yum install createrepo
+    mkdir /path/to/repo
+    createrepo --database /path/to/repo
+
+Create a .repo file in /etc/yum.repos.d/
+
+::
+
+   nano _local.repo
+   ---------------------
+    [local]
+    name=local Repository
+    baseurl=http:/path/to/repo
+    enabled=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
