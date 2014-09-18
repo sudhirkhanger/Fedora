@@ -447,9 +447,6 @@ Genymotion
 ::
 
   ./genymotion-2.2.1_x64.bin
-  mkdir /home/donnie/.Genymobile
-  touch /home/donnie/.Genymobile/genymotion.log
-  rm libQt*
 
 
 SoundKonverter
