@@ -58,6 +58,8 @@ Personal Fedora Notes
 
 28. `Create A Yum Repository`_
 
+29. `Speed up LibreOffice`_
+
 
 Yum Config
 ----------
@@ -537,26 +539,9 @@ Create a .repo file in /etc/yum.repos.d/
     name=local Repository
     baseurl=http:/path/to/repo
     enabled=1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+Speed up LibreOffice
+---------------------
+- Undo steps 20 or 30 steps
+- Under Graphics cache, set Use for LibreOffice to 128 MB
+- Set Memory per object to 20 MB (up from the default 5 MB).
