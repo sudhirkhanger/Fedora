@@ -40,25 +40,23 @@ Personal Fedora Notes
 
 19. `Dropbox-Dolphin Integration`_
 
-20. `Caffeine`_
+20. `Gnome Encfs Manager`_
 
-21. `Gnome Encfs Manager`_
+21. `Genymotion`_
 
-22. `Genymotion`_
+22. `SoundKonverter`_
 
-23. `SoundKonverter`_
+23. `SSH Key Management`_
 
-24. `SSH Key Management`_
+24. `reStructuredText`_
 
-25. `reStructuredText`_
+25. `Viber`_
 
-26. `Viber`_
+26. `Microsoft Core Fonts`_
 
-27. `Microsoft Core Fonts`_
+27. `Create A Yum Repository`_
 
-28. `Create A Yum Repository`_
-
-29. `Speed up LibreOffice`_
+28. `Speed up LibreOffice`_
 
 
 Yum Config
