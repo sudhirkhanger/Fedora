@@ -556,3 +556,7 @@ wmsystemtray
 ::
 
   wmsystemtray --non-wmaker --bgcolor white
+
+`Where Are My Systray Icons? <http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/>`_
+
+`How to use KWin window rules for legacy system tray icons? <https://forum.kde.org/viewtopic.php?f=111&t=122722>`_
