@@ -58,6 +58,8 @@ Personal Fedora Notes
 
 28. `Speed up LibreOffice`_
 
+29. `wmsystemtray`_
+
 
 Yum Config
 ----------
@@ -436,9 +438,15 @@ Caffeine
 Gnome Encfs Manager
 --------------------
 
-`libertyzero.com <http://www.libertyzero.com/GEncfsM/>`_
+::
 
-`OBS moritzmolch <http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager>`_
+  cd /etc/yum.repos.d/
+  wget http://download.opensuse.org/repositories/home:moritzmolch:gencfsm/Fedora_20/home:moritzmolch:gencfsm.repo
+  yum install gnome-encfs-manager
+
+`Project Homepage <http://www.libertyzero.com/GEncfsM/>`_
+
+`OBS mortizmolch <http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager>`_
 
 
 
@@ -509,3 +517,42 @@ Speed up LibreOffice
 - Undo steps 20 or 30 steps
 - Under Graphics cache, set Use for LibreOffice to 128 MB
 - Set Memory per object to 20 MB (up from the default 5 MB).
+
+wmsystemtray
+--------------
+
+::
+
+  yum install wmsystemtray
+  
+- KWin Rules
+
+::
+
+  [Application settings for wmsystemtray]
+  Description=Application settings for wmsystemtray
+  desktop=-1
+  desktoprule=2
+  noborder=true
+  noborderrule=2
+  skippager=true
+  skippagerrule=2
+  skipswitcher=true
+  skipswitcherrule=2
+  skiptaskbar=true
+  skiptaskbarrule=2
+  type=2
+  typerule=2
+  wmclass=wmsystemtray0 wmsystemtray
+  wmclasscomplete=true
+  wmclassmatch=1
+
+- Further tweaking
+  - Uncheck Arrangement & Access > Skip Taskbar
+  - Appearance & Fixes > Window Type > Force > Normal
+  
+- Autostart
+
+::
+
+  wmsystemtray --non-wmaker --bgcolor white
