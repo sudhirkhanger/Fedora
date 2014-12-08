@@ -60,7 +60,8 @@ Personal Fedora Notes
 
 29. `wmsystemtray`_
 
-
+30. `Bumblebee for Fedora 21`_
+    
 Yum Config
 ----------
 
@@ -560,3 +561,26 @@ wmsystemtray
 `Where Are My Systray Icons? <http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/>`_
 
 `How to use KWin window rules for legacy system tray icons? <https://forum.kde.org/viewtopic.php?f=111&t=122722>`_
+
+
+Bumblebee For Fedora 21
+-------------------------
+
+::
+   yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel
+
+   yum install VirtualGL
+
+   yum install VirtualGL.i686
+
+   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora21/noarch/bumblebee-release-1.2-1.noarch.rpm
+
+   yum install bbswitch bumblebee
+
+   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora21/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
+
+   yum install bumblebee-nvidia
+
+   yum install primus
+
+   yum install primus.i686
