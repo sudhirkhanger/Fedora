@@ -587,5 +587,6 @@ Bumblebee for Fedora 21
    yum install primus.i686
 
 
-- Fedora 21 has switched SELinux from permissive to enforcing. Bumblebee/Nvidia package currently doesn't work with it. Change SELinux=enforcing to SELinux=permissive in /etc/selinux/config
+- Fedora 21 has switched SELinux from permissive to enforcing. Bumblebee/Nvidia package currently doesn't work with it. Change ``SELinux=enforcing`` to ``SELinux=permissive`` in ``/etc/selinux/config``. More info about SELinux on Fedora is `here <https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html>`_
+  
   
