@@ -567,6 +567,7 @@ Bumblebee for Fedora 21
 -------------------------
 
 ::
+
    yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel
 
    yum install VirtualGL
