@@ -563,7 +563,7 @@ wmsystemtray
 `How to use KWin window rules for legacy system tray icons? <https://forum.kde.org/viewtopic.php?f=111&t=122722>`_
 
 
-Bumblebee For Fedora 21
+Bumblebee for Fedora 21
 -------------------------
 
 ::
@@ -584,3 +584,6 @@ Bumblebee For Fedora 21
    yum install primus
 
    yum install primus.i686
+
+- Fedora 21 has switched SELinux from permissive to enforcing. Bumblebee/Nvidia package currently doesn't work with it. Change SELinux=enforcing to SELinux=permissive in /etc/selinux/config
+  
