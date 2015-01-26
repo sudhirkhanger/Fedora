@@ -22,45 +22,43 @@ Personal Fedora Notes
 
 10. `Bumblebee`_
 
-11. `Moka Icon Theme`_
+11. `Dropbox`_
 
-12. `Dropbox`_
+12. `ksuperkey`_
 
-13. `ksuperkey`_
+13. `TLP`_
 
-14. `TLP`_
+14. `VirtualBox`_
 
-15. `VirtualBox`_
+15. `HandBrake`_
 
-16. `HandBrake`_
+16. `Skype`_
 
-17. `Skype`_
+17. `RedShift Plasma Widget`_
 
-18. `RedShift Plasma Widget`_
+18. `Dropbox-Dolphin Integration`_
 
-19. `Dropbox-Dolphin Integration`_
+19. `Gnome Encfs Manager`_
 
-20. `Gnome Encfs Manager`_
+20. `Genymotion`_
 
-21. `Genymotion`_
+21. `SoundKonverter`_
 
-22. `SoundKonverter`_
+22. `SSH Key Management`_
 
-23. `SSH Key Management`_
+23. `reStructuredText`_
 
-24. `reStructuredText`_
+24. `Viber`_
 
-25. `Viber`_
+25. `Microsoft Core Fonts`_
 
-26. `Microsoft Core Fonts`_
+26. `Create A Yum Repository`_
 
-27. `Create A Yum Repository`_
+27. `Speed up LibreOffice`_
 
-28. `Speed up LibreOffice`_
+28. `wmsystemtray`_
 
-29. `wmsystemtray`_
-
-30. `Bumblebee for Fedora 21`_
+29. `Bumblebee for Fedora 21`_
     
 Yum Config
 ----------
@@ -283,18 +281,6 @@ Bumblebee
 `Fedora Wiki Bumblebee <https://fedoraproject.org/wiki/Bumblebee>`_
 
 
-Moka Icon Theme
--------------------
-
-::
-
-  sudo wget http://download.opensuse.org/repositories/home:/snwh:/moka-icon-theme/Fedora_20/home:snwh:moka-icon-theme.repo -O /etc/yum.repos.d/moka-icon-theme.repo
-  sudo yum update && sudo yum install moka-icon-theme
-
-
-`Moka Project <http://mokaproject.com/moka-icon-theme/download/fedora/>`_
-
-
 Dropbox
 --------
 
@@ -400,16 +386,7 @@ RedShift Plasma Widget
 
 ::
 
-  sudo yum group install "C Development Tools and Libraries"
-  sudo yum install cmake kde-workspace-devel redshift-gtk
-  mkdir build
-  cd build
-  cmake -DCMAKE_INSTALL_PREFIX=$(kde4-config --prefix) ..
-  make
-  sudo make install
-
-
-`kde-apps.org <http://kde-apps.org/content/show.php/Redshift+Plasmoid?content=148737>`_
+  sudo yum install kde-plasma-redshift
 
 
 Dropbox-Dolphin Integration
