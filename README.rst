@@ -539,14 +539,3 @@ wmsystemtray
 `Where Are My Systray Icons? <http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/>`_
 
 `How to use KWin window rules for legacy system tray icons? <https://forum.kde.org/viewtopic.php?f=111&t=122722>`_
-
-
-Bumblebee for Fedora 21
--------------------------
-
-
-
-
-- Fedora 21 has switched SELinux from permissive to enforcing. Bumblebee/Nvidia package currently doesn't work with it. Change ``SELinux=enforcing`` to ``SELinux=permissive`` in ``/etc/selinux/config``. More info about SELinux on Fedora is `here <https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html>`_
-  
-  
