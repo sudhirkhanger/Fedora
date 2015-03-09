@@ -48,17 +48,13 @@ Personal Fedora Notes
 
 23. `reStructuredText`_
 
-24. `Viber`_
+24. `Microsoft Core Fonts`_
 
-25. `Microsoft Core Fonts`_
+25. `Create A Yum Repository`_
 
-26. `Create A Yum Repository`_
+26. `Speed up LibreOffice`_
 
-27. `Speed up LibreOffice`_
-
-28. `wmsystemtray`_
-
-29. `Bumblebee for Fedora 21`_
+27. `wmsystemtray`_
     
 Yum Config
 ----------
@@ -278,7 +274,25 @@ Media Codecs
 Bumblebee
 -----------
 
-`Fedora Wiki Bumblebee <https://fedoraproject.org/wiki/Bumblebee>`_
+::
+
+   yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel
+
+   yum install VirtualGL
+
+   yum install VirtualGL.i686
+
+   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora21/noarch/bumblebee-release-1.2-1.noarch.rpm
+
+   yum install bbswitch bumblebee
+
+   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora21/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
+
+   yum install bumblebee-nvidia
+
+   yum install primus
+
+   yum install primus.i686
 
 
 Dropbox
@@ -441,13 +455,6 @@ SoundKonverter
 
 `Github HessiJames <https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages>`_
 
-SSH Key Management
----------------------
-
-Checkout this detailed blogpost http://sudhirkhanger.com/2014/07/17/how-to-manage-multiple-ssh-keys-on-fedora-kde/
-
-
-Viber
 ------
 ::
 
@@ -543,25 +550,7 @@ wmsystemtray
 Bumblebee for Fedora 21
 -------------------------
 
-::
 
-   yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel
-
-   yum install VirtualGL
-
-   yum install VirtualGL.i686
-
-   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora21/noarch/bumblebee-release-1.2-1.noarch.rpm
-
-   yum install bbswitch bumblebee
-
-   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora21/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
-
-   yum install bumblebee-nvidia
-
-   yum install primus
-
-   yum install primus.i686
 
 
 - Fedora 21 has switched SELinux from permissive to enforcing. Bumblebee/Nvidia package currently doesn't work with it. Change ``SELinux=enforcing`` to ``SELinux=permissive`` in ``/etc/selinux/config``. More info about SELinux on Fedora is `here <https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html>`_
