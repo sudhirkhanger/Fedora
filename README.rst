@@ -44,17 +44,15 @@ Personal Fedora Notes
 
 21. `SoundKonverter`_
 
-22. `SSH Key Management`_
+22. `reStructuredText`_
 
-23. `reStructuredText`_
+23. `Microsoft Core Fonts`_
 
-24. `Microsoft Core Fonts`_
+24. `Create A Yum Repository`_
 
-25. `Create A Yum Repository`_
+25. `Speed up LibreOffice`_
 
-26. `Speed up LibreOffice`_
-
-27. `wmsystemtray`_
+26. `wmsystemtray`_
     
 Yum Config
 ----------
