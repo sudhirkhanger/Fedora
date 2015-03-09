@@ -455,12 +455,6 @@ SoundKonverter
 
 `Github HessiJames <https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages>`_
 
-------
-::
-
-   wget http://download.cdn.viber.com/cdn/desktop/Linux/viber.rpm
-   yum install viber.rpm
-
 reStructuredText
 -----------------
 
