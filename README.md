@@ -1,6 +1,4 @@
-======================
-Personal Fedora Notes
-======================
+# Personal Fedora Notes
 
 1. `Yum Config`_
 
@@ -54,181 +52,106 @@ Personal Fedora Notes
 
 26. `wmsystemtray`_
     
-Yum Config
-----------
-
-- Keep Cache
-
-::
-
-  /etc/yum.conf
-  ------------------------
-  keepcache=1
-  clean_requirements_on_remove=1
-
-Yum Plugins
------------
-
-::
-
-  sudo yum install yum-plugin-fastestmirror yum-plugin-local \
-  yum-plugin-changelog yum-plugin-show-leaves
-
-Disable Nouveau
-----------------
-
-- Blacklist ``nouveau`` module
-
-::
-
-  echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist-nouveau.conf
-
-- Recreate initramfs
-
-::
-
-  sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
-  sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
 
 
-`Ask Fedora how-to-disable-nouveau-in-fedora-18 <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_
-
-Google Chrome 
------------------
+## Google Chrome
  
-`Chrome <https://www.google.com/intl/en_in/chrome/browser/>`_
+[Chrome](https://www.google.com/intl/en_in/chrome/browser/)
  
-`Hangouts Plugin <https://www.google.com/tools/dlpage/hangoutplugin>`_
+[Hangouts Plugin](https://www.google.com/tools/dlpage/hangoutplugin)
 
-RPM Fusion
-------------
- 
-::
+## RPM Fusion
 
-  su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-  http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+	su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
+[RPMFusion](http://rpmfusion.org/Configuration)
 
-`RPMFusion <http://rpmfusion.org/Configuration>`_
+## Java
 
-Android
---------
+### OpenJDK 8
 
-- Install `Java`_
+	sudo yum install java-1.8.0-openjdk.x86_64 icedtea-web.x86_64
 
 
-- Android SDK Dependencies
+### Oracle Java 8
 
-::
+#### Install
 
-  sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
-  ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 \
-  mesa-libGL.i686
+	sudo su
+	rpm -ivh jdk-8u25-linux-x64.rpm
 
-- Android Build Dependencies
-
-::
-
-  sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
-  zlib-devel.{x86_64,i686} ncurses-devel.i686 readline-devel.i686 perl-Switch
-
-- Set Android SDK Path
-
-::
+#### Upgrade
   
-  ~/.bashrc
-  -----------------------------------------------------
-  PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
-  export PATH
+	rpm -Uvh jdk-8u25-linux-x64.rpm
 
-  # For SDK version r_08 and higher, also add this for adb:
-  PATH=$PATH:$HOME/AndroidSDK/platform-tools
-  export PATH
+#### Setup environmental variables
 
-- ``udev`` rule
-
-::
-
-  cd /etc/udev/rules.d
-  wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
-  chmod a+r /etc/udev/rules.d/51-android.rules
+	emacs -nw .bashrc
+	
+	export JAVA_HOME=/usr/java/default/
+	export PATH=$JAVA_HOME/bin:$PATH
   
-`Fedora Wiki HOWTO_Setup_Android_Development <https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development>`_
+#### Set Alternatives
 
-`Using Hardware Devices <http://developer.android.com/tools/device.html>`_
+	alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
+	alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
+	alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
+	alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
+	alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
 
-`MORf30 Github <https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules>`_
-
-
-Java
------
-
-- Install OpenJDK
-
-::
-
-  sudo yum install java-1.7.0-openjdk.x86_64 icedtea-web.x86_64
+	alternatives --config java
+	alternatives --config javaws
+	alternatives --config libjavaplugin.so.x86_64
+	alternatives --config javac
+	alternatives --config jar
 
 
-- Install Oracle Java 6
+[Oracle Docs](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm)
 
-::
+[if-not-true-then-false.com](http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/)
 
-  sudo su
-  sh jdk-6u45-linux-x64-rpm.bin
+[Fedora Forums](http://forums.fedoraforum.org/showthread.php?t=297016)
+
+[John Goltzer Blogspot](http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html)
+
+### Android
+
+#### Android SDK Dependencies
+
+	sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
+	ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 \
+	mesa-libGL.i686
+
+#### Android Build Dependencies
+
+	sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
+	zlib-devel.{x86_64,i686} ncurses-devel.i686 readline-devel.i686 perl-Switch
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
   
+	PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
+	export PATH
 
-- Install Oracle Java 7
+    # For SDK version r_08 and higher, also add this for adb:
+	PATH=$PATH:$HOME/AndroidSDK/platform-tools
+	export PATH
 
-::
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
   
-  sudo su
-  rpm -ivh jdk-7u60-linux-x64.rpm
-  
-If upgrading
+[Fedora Wiki HOWTO_Setup_Android_Development](https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development)
 
-::
-  
-  rpm -Uvh jdk-7u60-linux-x64.rpm
+[Using Hardware Devices](http://developer.android.com/tools/device.html)
 
-- Set Java Path for JDK 6
-
-::
-
-  export JAVA_HOME=/usr/java/jdk1.6.0_45/
-  export PATH=$JAVA_HOME/bin:$PATH
-  
-- Set Java Path for JDK 7
-
-::
-  
-  export JAVA_HOME=/usr/java/default/
-  export PATH=$JAVA_HOME/bin:$PATH
-  
-- Set Alternatives
-
-::
-
-  alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
-  alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
-  alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
-  alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
-  alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
-
-  alternatives --config java
-  alternatives --config javaws
-  alternatives --config libjavaplugin.so.x86_64
-  alternatives --config javac
-  alternatives --config jar
+[MORf30 Github](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)
 
 
-`Oracle Docs <http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm>`_
 
-`if-not-true-then-false.com <http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/>`_
-
-`Fedora Forums <http://forums.fedoraforum.org/showthread.php?t=297016>`_
-
-`John Goltzer Blogspot <http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html>`_
 
 
 Thinkfan
@@ -537,3 +460,42 @@ wmsystemtray
 `Where Are My Systray Icons? <http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/>`_
 
 `How to use KWin window rules for legacy system tray icons? <https://forum.kde.org/viewtopic.php?f=111&t=122722>`_
+
+Yum Config
+----------
+
+- Keep Cache
+
+::
+
+  /etc/yum.conf
+  ------------------------
+  keepcache=1
+  clean_requirements_on_remove=1
+
+Yum Plugins
+-----------
+
+::
+
+  sudo yum install yum-plugin-fastestmirror yum-plugin-local \
+  yum-plugin-changelog yum-plugin-show-leaves
+
+Disable Nouveau
+----------------
+
+- Blacklist ``nouveau`` module
+
+::
+
+  echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist-nouveau.conf
+
+- Recreate initramfs
+
+::
+
+  sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+  sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)
+
+
+`Ask Fedora how-to-disable-nouveau-in-fedora-18 <https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/>`_

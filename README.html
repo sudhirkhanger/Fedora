@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h1>Personal Fedora Notes</h1>
+
+<ol>
+<li><p><code>Yum Config</code>_</p></li>
+<li><p><code>Yum Plugins</code>_</p></li>
+<li><p><code>Disable Nouveau</code>_</p></li>
+<li><p><code>Google Chrome</code>_</p></li>
+<li><p><code>RPM Fusion</code>_</p></li>
+<li><p><code>Android</code>_</p></li>
+<li><p><code>Java</code>_</p></li>
+<li><p><code>Thinkfan</code>_</p></li>
+<li><p><code>Media Codecs</code>_</p></li>
+<li><p><code>Bumblebee</code>_</p></li>
+<li><p><code>Dropbox</code>_</p></li>
+<li><p><code>ksuperkey</code>_</p></li>
+<li><p><code>TLP</code>_</p></li>
+<li><p><code>VirtualBox</code>_</p></li>
+<li><p><code>HandBrake</code>_</p></li>
+<li><p><code>Skype</code>_</p></li>
+<li><p><code>RedShift Plasma Widget</code>_</p></li>
+<li><p><code>Dropbox-Dolphin Integration</code>_</p></li>
+<li><p><code>Gnome Encfs Manager</code>_</p></li>
+<li><p><code>Genymotion</code>_</p></li>
+<li><p><code>SoundKonverter</code>_</p></li>
+<li><p><code>reStructuredText</code>_</p></li>
+<li><p><code>Microsoft Core Fonts</code>_</p></li>
+<li><p><code>Create A Yum Repository</code>_</p></li>
+<li><p><code>Speed up LibreOffice</code>_</p></li>
+<li><p><code>wmsystemtray</code>_</p></li>
+</ol>
+
+<h2>Google Chrome</h2>
+
+<p><a href="https://www.google.com/intl/en_in/chrome/browser/">Chrome</a></p>
+
+<p><a href="https://www.google.com/tools/dlpage/hangoutplugin">Hangouts Plugin</a></p>
+
+<h2>RPM Fusion</h2>
+
+<pre><code>su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+</code></pre>
+
+<p><a href="http://rpmfusion.org/Configuration">RPMFusion</a></p>
+
+<h2>Java</h2>
+
+<h3>OpenJDK 8</h3>
+
+<pre><code>sudo yum install java-1.8.0-openjdk.x86_64 icedtea-web.x86_64
+</code></pre>
+
+<h3>Oracle Java 8</h3>
+
+<h4>Install</h4>
+
+<pre><code>sudo su
+rpm -ivh jdk-8u25-linux-x64.rpm
+</code></pre>
+
+<h4>Upgrade</h4>
+
+<pre><code>rpm -Uvh jdk-8u25-linux-x64.rpm
+</code></pre>
+
+<h4>Setup environmental variables</h4>
+
+<pre><code>emacs -nw .bashrc
+
+export JAVA_HOME=/usr/java/default/
+export PATH=$JAVA_HOME/bin:$PATH
+</code></pre>
+
+<h4>Set Alternatives</h4>
+
+<pre><code>alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
+alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
+alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
+alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
+alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
+
+alternatives --config java
+alternatives --config javaws
+alternatives --config libjavaplugin.so.x86_64
+alternatives --config javac
+alternatives --config jar
+</code></pre>
+
+<p><a href="http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm">Oracle Docs</a></p>
+
+<p><a href="http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/">if-not-true-then-false.com</a></p>
+
+<p><a href="http://forums.fedoraforum.org/showthread.php?t=297016">Fedora Forums</a></p>
+
+<p><a href="http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html">John Goltzer Blogspot</a></p>
+
+<h3>Android</h3>
+
+<h4>Android SDK Dependencies</h4>
+
+<pre><code>sudo yum install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
+ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 \
+mesa-libGL.i686
+</code></pre>
+
+<h4>Android Build Dependencies</h4>
+
+<pre><code>sudo yum install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
+zlib-devel.{x86_64,i686} ncurses-devel.i686 readline-devel.i686 perl-Switch
+</code></pre>
+
+<h4>Android SDK Environmental Variable</h4>
+
+<pre><code>~/.bashrc
+
+PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
+export PATH
+
+# For SDK version r_08 and higher, also add this for adb:
+PATH=$PATH:$HOME/AndroidSDK/platform-tools
+export PATH
+</code></pre>
+
+<h4>udev Rules</h4>
+
+<pre><code>cd /etc/udev/rules.d
+wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+chmod a+r /etc/udev/rules.d/51-android.rules
+</code></pre>
+
+<p><a href="https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development">Fedora Wiki HOWTO<em>Setup</em>Android_Development</a></p>
+
+<p><a href="http://developer.android.com/tools/device.html">Using Hardware Devices</a></p>
+
+<p><a href="https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules">MORf30 Github</a></p>
+
+<h2>Thinkfan</h2>
+
+<ul>
+<li>Install and enable systemd file</li>
+</ul>
+
+<p>::</p>
+
+<p>sudo yum install thinkfan
+  sudo systemctl enable thinkfan</p>
+
+<ul>
+<li>Modify config and add output of following command to it prefixing with <code>sensors</code></li>
+</ul>
+
+<p>::</p>
+
+<p>find /sys/devices -type f -name "temp*_input"</p>
+
+<p>/etc/thinkfan.conf</p>
+
+<hr />
+
+<p>sensor /sys/devices/virtual/hwmon/hwmon0/temp1<em>input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3</em>input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1<em>input
+  sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2</em>input</p>
+
+<h2>Media Codecs</h2>
+
+<p>::</p>
+
+<p>sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
+  gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
+  gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
+  gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good</p>
+
+<p><code>Fedy &lt;https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh&gt;</code>_</p>
+
+<h2>Bumblebee</h2>
+
+<p>::</p>
+
+<p>yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel</p>
+
+<p>yum install VirtualGL</p>
+
+<p>yum install VirtualGL.i686</p>
+
+<p>yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora21/noarch/bumblebee-release-1.2-1.noarch.rpm</p>
+
+<p>yum install bbswitch bumblebee</p>
+
+<p>yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora21/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm</p>
+
+<p>yum install bumblebee-nvidia</p>
+
+<p>yum install primus</p>
+
+<p>yum install primus.i686</p>
+
+<h2>Dropbox</h2>
+
+<p>::</p>
+
+<pre><code>cd ~ &amp;&amp; wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+</code></pre>
+
+<p>~/.dropbox-dist/dropboxd</p>
+
+<h2>ksuperkey</h2>
+
+<ul>
+<li>Installation</li>
+</ul>
+
+<p>::</p>
+
+<p>sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
+  git clone https://github.com/hanschen/ksuperkey.git
+  cd ksuperkey
+  make
+  sudo make install</p>
+
+<ul>
+<li>Autostart</li>
+</ul>
+
+<p>::</p>
+
+<p>ksuperkey -e 'Control<em>L=Escape;Super</em>L=Alt_L|F2'</p>
+
+<p><code>Github hanschen &lt;https://github.com/hanschen/ksuperkey&gt;</code>_</p>
+
+<h2>TLP</h2>
+
+<ul>
+<li>Configure Repo</li>
+</ul>
+
+<p>::</p>
+
+<p>yum localinstall --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
+  yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</p>
+
+<ul>
+<li>Installation</li>
+</ul>
+
+<p>::</p>
+
+<p>sudo yum install tlp tlp-rdw akmod-tp<em>smapi akmod-acpi</em>call kernel-devel</p>
+
+<p><code>Linrunner.de &lt;http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation Linrunner&gt;</code>_</p>
+
+<h2>VirtualBox</h2>
+
+<ul>
+<li>Configure Repo</li>
+</ul>
+
+<p>::</p>
+
+<p>cd /etc/yum.repos.d/
+  wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo</p>
+
+<ul>
+<li>Installation</li>
+</ul>
+
+<p>::</p>
+
+<p>yum install binutils gcc make patch libgomp glibc-headers glibc-devel \
+  kernel-headers kernel-devel dkms VirtualBox-4.3</p>
+
+<ul>
+<li>Setup</li>
+</ul>
+
+<p>::</p>
+
+<p>/etc/init.d/vboxdrv setup
+  usermod -a -G vboxusers $USER</p>
+
+<p><code>Fedoraonline.se &lt;http://www.fedoraonline.se/install-oracle-vm-virtualbox-fedora-20/&gt;</code>_</p>
+
+<p><code>Oracle &lt;https://www.virtualbox.org/wiki/Linux_Downloads&gt;</code>_</p>
+
+<h2>HandBrake </h2>
+
+<p><code>Negativo17 HandBrake &lt;http://negativo17.org/handbrake/&gt;</code>_</p>
+
+<h2>Skype</h2>
+
+<ul>
+<li>32-bit Libraries for 64-bit systems</li>
+</ul>
+
+<p>::</p>
+
+<p>sudo yum -y install libXv.i686 libXScrnSaver.i686 qt.i686 qt-x11.i686 pulseaudio-libs.i686 \
+  pulseaudio-libs-glib2.i686 alsa-plugins-pulseaudio.i686 qtwebkit.i686</p>
+
+<ul>
+<li>Follow Negativo17's post.</li>
+</ul>
+
+<p><code>Negativo17 Skype &lt;http://negativo17.org/skype-and-skype-pidgin-plugin/&gt;</code>_</p>
+
+<p><code>Skype.com &lt;https://support.skype.com/en/faq/FA12120/getting-started-with-skype-for-linux&gt;</code>_</p>
+
+<h2>RedShift Plasma Widget</h2>
+
+<p>::</p>
+
+<p>sudo yum install kde-plasma-redshift</p>
+
+<h2>Dropbox-Dolphin Integration</h2>
+
+<p>::</p>
+
+<p>sudo yum install kde-baseapps-devel
+  git clone git://anongit.kde.org/scratch/trichard/dolphin-box-plugin
+  cd dolphin-box-plugin
+  cmake -DCMAKE<em>INSTALL</em>PREFIX=/usr -DCMAKE<em>BUILD</em>TYPE=Release .
+  make
+  sudo make install</p>
+
+<p><code>trichard-kde.blogspot.in &lt;http://trichard-kde.blogspot.in/2010/12/introducing-dropbox-integration-for.html&gt;</code>_</p>
+
+<p><code>aur.archlinux.org &lt;https://aur.archlinux.org/packages/do/dolphin-box-plugin-git/PKGBUILD AUR&gt;</code>_</p>
+
+<h2>Caffeine</h2>
+
+<p><code>My blog &lt;http://sudhirkhanger.com/2014/03/18/how-to-install-caffeine-in-fedora-20/&gt;</code>_</p>
+
+<p><code>OBS zhonghuaren &lt;http://software.opensuse.org/download.html?project=home%3Azhonghuaren&amp;package=caffeine&gt;</code>_</p>
+
+<h2>Gnome Encfs Manager</h2>
+
+<p>::</p>
+
+<p>cd /etc/yum.repos.d/
+  wget http://download.opensuse.org/repositories/home:moritzmolch:gencfsm/Fedora_20/home:moritzmolch:gencfsm.repo
+  yum install gnome-encfs-manager</p>
+
+<p><code>Project Homepage &lt;http://www.libertyzero.com/GEncfsM/&gt;</code>_</p>
+
+<p><code>OBS mortizmolch &lt;http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&amp;package=gnome-encfs-manager&gt;</code>_</p>
+
+<h2>Genymotion</h2>
+
+<p>::</p>
+
+<p>./genymotion-2.2.1_x64.bin</p>
+
+<h2>SoundKonverter</h2>
+
+<p><code>Github HessiJames &lt;https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages&gt;</code>_</p>
+
+<h2>reStructuredText</h2>
+
+<p>::</p>
+
+<p>sudo yum install python-docutils python-sphinx</p>
+
+<h2>Microsoft Core Fonts</h2>
+
+<p>::</p>
+
+<pre><code>sudo yum install msttcore-fonts-installer-2.6-1.noarch.rpm
+</code></pre>
+
+<p>http://sourceforge.net/projects/mscorefonts2/?source=typ_redirect</p>
+
+<h2>Create A Yum Repository</h2>
+
+<p>::</p>
+
+<pre><code>yum install createrepo
+mkdir /path/to/repo
+createrepo --database /path/to/repo
+</code></pre>
+
+<p>Create a .repo file in /etc/yum.repos.d/</p>
+
+<p>::</p>
+
+<p>nano _local.repo</p>
+
+<hr />
+
+<pre><code>[local]
+name=local Repository
+baseurl=http:/path/to/repo
+enabled=1
+</code></pre>
+
+<h2>Speed up LibreOffice</h2>
+
+<ul>
+<li>Undo steps 20 or 30 steps</li>
+<li>Under Graphics cache, set Use for LibreOffice to 128 MB</li>
+<li>Set Memory per object to 20 MB (up from the default 5 MB).</li>
+</ul>
+
+<h2>wmsystemtray</h2>
+
+<p>::</p>
+
+<p>yum install wmsystemtray</p>
+
+<ul>
+<li>KWin Rules</li>
+</ul>
+
+<p>::</p>
+
+<p>[Application settings for wmsystemtray]
+  Description=Application settings for wmsystemtray
+  desktop=-1
+  desktoprule=2
+  noborder=true
+  noborderrule=2
+  skippager=true
+  skippagerrule=2
+  skipswitcher=true
+  skipswitcherrule=2
+  skiptaskbar=true
+  skiptaskbarrule=2
+  type=2
+  typerule=2
+  wmclass=wmsystemtray0 wmsystemtray
+  wmclasscomplete=true
+  wmclassmatch=1</p>
+
+<ul>
+<li><p>Further tweaking</p>
+
+<ul>
+<li>Uncheck Arrangement &amp; Access > Skip Taskbar</li>
+<li>Appearance &amp; Fixes > Window Type > Force > Normal</li>
+</ul></li>
+<li><p>Autostart</p></li>
+</ul>
+
+<p>::</p>
+
+<p>wmsystemtray --non-wmaker --bgcolor white</p>
+
+<p><code>Where Are My Systray Icons? &lt;http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/&gt;</code>_</p>
+
+<p><code>How to use KWin window rules for legacy system tray icons? &lt;https://forum.kde.org/viewtopic.php?f=111&amp;t=122722&gt;</code>_</p>
+
+<h2>Yum Config</h2>
+
+<ul>
+<li>Keep Cache</li>
+</ul>
+
+<p>::</p>
+
+<p>/etc/yum.conf</p>
+
+<hr />
+
+<p>keepcache=1
+  clean<em>requirements</em>on_remove=1</p>
+
+<h2>Yum Plugins</h2>
+
+<p>::</p>
+
+<p>sudo yum install yum-plugin-fastestmirror yum-plugin-local \
+  yum-plugin-changelog yum-plugin-show-leaves</p>
+
+<h2>Disable Nouveau</h2>
+
+<ul>
+<li>Blacklist <code>nouveau</code> module</li>
+</ul>
+
+<p>::</p>
+
+<p>echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist-nouveau.conf</p>
+
+<ul>
+<li>Recreate initramfs</li>
+</ul>
+
+<p>::</p>
+
+<p>sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+  sudo dracut --omit-drivers nouveau /boot/initramfs-$(uname -r).img $(uname -r)</p>
+
+<p><code>Ask Fedora how-to-disable-nouveau-in-fedora-18 &lt;https://ask.fedoraproject.org/en/question/23982/how-to-disable-nouveau-in-fedora-18/&gt;</code>_</p>
+
+</body>
+</html>
