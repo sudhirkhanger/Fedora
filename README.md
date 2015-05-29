@@ -178,73 +178,41 @@ Thinkfan
   sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
   
 
-Media Codecs
-------------
+## Media Codecs
 
-::
-
-  sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
-  gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
-  gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
-  gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
-  
-
-`Fedy <https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh>`_
+    sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
+    gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
+    gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
+    gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
+    
+[Fedy](https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh)
 
 
-Bumblebee
------------
+## Bumblebee
 
-::
+    yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel \
+    kernel-headers automake gcc gtk2-devel VirtualGL VirtualGL.i686
+    yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora22/noarch/bumblebee-release-1.2-1.noarch.rpm
+    yum install bbswitch bumblebee
+    yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora22/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
+    yum install bumblebee-nvidia primus primus.i686
 
-   yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel kernel-headers automake gcc gtk2-devel
+## ksuperkey
 
-   yum install VirtualGL
+### Installation
 
-   yum install VirtualGL.i686
+    sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
+    git clone https://github.com/hanschen/ksuperkey.git
+    cd ksuperkey
+    make
+    sudo make install
+    
+### Autostart
 
-   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora21/noarch/bumblebee-release-1.2-1.noarch.rpm
+    ksuperkey -e 'Super_L=Alt_L|F2'
+    
 
-   yum install bbswitch bumblebee
-
-   yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora21/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
-
-   yum install bumblebee-nvidia
-
-   yum install primus
-
-   yum install primus.i686
-
-
-Dropbox
---------
-
-::
-  
-    cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-  ~/.dropbox-dist/dropboxd
-  
-
-ksuperkey
-----------
-
-- Installation
-
-::
-  
-  sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
-  git clone https://github.com/hanschen/ksuperkey.git
-  cd ksuperkey
-  make
-  sudo make install
-  
-- Autostart
-
-::
-
-  ksuperkey -e 'Control_L=Escape;Super_L=Alt_L|F2'
-
-`Github hanschen <https://github.com/hanschen/ksuperkey>`_
+[Github hanschen](https://github.com/hanschen/ksuperkey)
 
 TLP
 -------
