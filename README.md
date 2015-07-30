@@ -261,4 +261,11 @@ firefox
 
 libappindicator libappindicator-gtk3 google-chrome-stable google-talkplugin mssttcorefonts
 
-kmenuedit
+sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+sudo dnf install -y dnf-plugins-core perl-Text-Markdown
+
+### SimpleScreenRecorder
+
+sudo dnf copr enable dnf copr enable nickth/ssr
+sudo dnf install simplescreenrecorder
