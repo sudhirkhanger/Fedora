@@ -99,7 +99,8 @@
 
 #### Install and enable systemd file
 
-	sudo yum install thinkfan
+	sudo yum install thinkfan lm_sensors
+	sudo sensors-detect
 	sudo systemctl enable thinkfan
 
 #### Modify config and add output of following command to it prefixing with ``sensors``
@@ -179,7 +180,7 @@
 
 ### RedShift Plasma Widget
 
-	sudo dnf install redshift-gtk
+	sudo dnf install redshift
 
 ### Gnome Encfs Manager
 
@@ -253,19 +254,35 @@
 
 [How to use KWin window rules for legacy system tray icons?](https://forum.kde.org/viewtopic.php?f=111&t=122722)
 
-thinkfan lm_sensors
+### Emacs
 
-emacs emacs-goodies
+	sudo dnf install emacs emacs-goodies
 
-firefox 
+### Firefox
 
-libappindicator libappindicator-gtk3 google-chrome-stable google-talkplugin mssttcorefonts
+	sudo dnf install firefox
 
-sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+### Flash
 
-sudo dnf install -y dnf-plugins-core perl-Text-Markdown
+### Google Chrome
+
+	sudo dnf install libappindicator libappindicator-gtk3 google-chrome-stable google-talkplugin
+	sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+### DNF Plugin Core
+
+	sudo dnf install dnf-plugins-core
 
 ### SimpleScreenRecorder
 
-sudo dnf copr enable dnf copr enable nickth/ssr
-sudo dnf install simplescreenrecorder
+	sudo dnf copr enable nickth/ssr
+	sudo dnf install simplescreenrecorder
+
+### Gimp
+
+	sudo dnf install gimp.x86_64 gmic-gimp.x86_64 gimp-help.noarch gimp-resynthesizer.x86_64
+
+### Inkscape
+
+	sudo dnf install inkscape
+
