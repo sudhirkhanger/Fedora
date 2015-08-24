@@ -223,27 +223,27 @@
   
 #### KWin Rules
 
-	[Application settings for wmsystemtray]
-	Description=Application settings for wmsystemtray
-	desktop=-1
-	desktoprule=2
-	noborder=true
-	noborderrule=2
-	skippager=true
-	skippagerrule=2
-	skipswitcher=true
-	skipswitcherrule=2
-	skiptaskbar=true
-	skiptaskbarrule=2
-	type=2
-	typerule=2
-	wmclass=wmsystemtray0 wmsystemtray
-	wmclasscomplete=true
-	wmclassmatch=1
+        [Application settings for wmsystemtray]
+        Description=Application settings for wmsystemtray
+        desktop=-1
+        desktoprule=2
+        noborder=true
+        noborderrule=2
+        skippager=true
+        skippagerrule=2
+        skipswitcher=true
+        skipswitcherrule=2
+        skiptaskbar=true
+        skiptaskbarrule=2
+        type=0
+        typerule=2
+        wmclass=wmsystemtray0 wmsystemtray
+        wmclasscomplete=true
+        wmclassmatch=1
 
-#### Further tweaking
+#### Further tweaking (probably not needed with updated kwin rule)
 
-- Uncheck Arrangement & Access > Skip Taskbar
+- Uncheck Arrangement & Access > Skip Taskbar (Force Yes)
 - Appearance & Fixes > Window Type > Force > Normal
   
 #### Autostart
