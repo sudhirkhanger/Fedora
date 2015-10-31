@@ -166,7 +166,7 @@
 
 ### VirtualBox
 
-	dnf install akmod-virtualbox virtualbox dkms
+	dnf install akmod-irtualbox virtualbox dkms
 	usermod -a -G vboxusers $USER
 	systemctl enable dkms
 
@@ -178,9 +178,6 @@
 
 [Negativo17](http://negativo17.org/skype-and-skype-pidgin-plugin/)
 
-### RedShift Plasma Widget
-
-	sudo dnf install redshift
 
 ### Gnome Encfs Manager
 
@@ -269,14 +266,7 @@
 	sudo dnf install libappindicator libappindicator-gtk3 google-chrome-stable google-talkplugin
 	sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 
-### DNF Plugin Core
-
-	sudo dnf install dnf-plugins-core
-
 ### SimpleScreenRecorder
-
-	sudo dnf copr enable nickth/ssr
-	sudo dnf install simplescreenrecorder
 
 ### Gimp
 
@@ -285,4 +275,3 @@
 ### Inkscape
 
 	sudo dnf install inkscape
-
