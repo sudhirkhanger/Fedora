@@ -1,15 +1,5 @@
 # Personal Fedora Notes
 
-## Google Chrome
- 
-[Chrome](https://www.google.com/intl/en_in/chrome/browser/)
- 
-[Hangouts Plugin](https://www.google.com/tools/dlpage/hangoutplugin)
-
-## RPM Fusion
-
-[RPMFusion](http://rpmfusion.org/Configuration)
-
 ## Java
 
 ### OpenJDK 8
@@ -214,43 +204,6 @@
 - Under Graphics cache, set Use for LibreOffice to 128 MB
 - Set Memory per object to 20 MB (up from the default 5 MB).
 
-### wmsystemtray
-
-	yum install wmsystemtray
-  
-#### KWin Rules
-
-        [Application settings for wmsystemtray]
-        Description=Application settings for wmsystemtray
-        desktop=-1
-        desktoprule=2
-        noborder=true
-        noborderrule=2
-        skippager=true
-        skippagerrule=2
-        skipswitcher=true
-        skipswitcherrule=2
-        skiptaskbar=true
-        skiptaskbarrule=2
-        type=0
-        typerule=2
-        wmclass=wmsystemtray0 wmsystemtray
-        wmclasscomplete=true
-        wmclassmatch=1
-
-#### Further tweaking (probably not needed with updated kwin rule)
-
-- Uncheck Arrangement & Access > Skip Taskbar (Force Yes)
-- Appearance & Fixes > Window Type > Force > Normal
-  
-#### Autostart
-
-	wmsystemtray --non-wmaker --bgcolor white
-
-[Where Are My Systray Icons?](http://blog.martin-graesslin.com/blog/2014/06/where-are-my-systray-icons/)
-
-[How to use KWin window rules for legacy system tray icons?](https://forum.kde.org/viewtopic.php?f=111&t=122722)
-
 ### Emacs
 
 	sudo dnf install emacs emacs-goodies
@@ -259,14 +212,10 @@
 
 	sudo dnf install firefox
 
-### Flash
-
 ### Google Chrome
 
 	sudo dnf install libappindicator libappindicator-gtk3 google-chrome-stable google-talkplugin
 	sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
-
-### SimpleScreenRecorder
 
 ### Gimp
 
@@ -275,3 +224,11 @@
 ### Inkscape
 
 	sudo dnf install inkscape
+
+### VDPAU/VAAPI
+
+	sudo dnf install vdpauinfo libva-vdpau-driver libva-utils libvdpau-va-gl
+
+	~/.bashrc
+	# VDAPU Support
+	export VDPAU_DRIVER=va_gl
