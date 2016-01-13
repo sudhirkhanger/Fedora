@@ -4,7 +4,7 @@
 
 ### OpenJDK 8
 
-	sudo yum install java-1.8.0-openjdk.x86_64 icedtea-web.x86_64
+	sudo dnf install java-1.8.0-openjdk.x86_64 icedtea-web.x86_64
 
 
 ### Oracle Java 8
@@ -65,12 +65,8 @@
 
 	~/.bashrc
   
-	PATH=$PATH:$HOME/AndroidSDK:$HOME/AndroidSDK/tools
-	export PATH
-
-    # For SDK version r_08 and higher, also add this for adb:
-	PATH=$PATH:$HOME/AndroidSDK/platform-tools
-	export PATH
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 #### udev Rules
 
@@ -89,7 +85,7 @@
 
 #### Install and enable systemd file
 
-	sudo yum install thinkfan lm_sensors
+	sudo dnf install thinkfan lm_sensors
 	sudo sensors-detect
 	sudo systemctl enable thinkfan
 
@@ -107,7 +103,7 @@
 
 ## Media Codecs
 
-    sudo yum install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
+    sudo dnf install -y amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
     gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
     gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
     gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
@@ -116,12 +112,12 @@
 
 ## Bumblebee
 
-    yum install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel \
+    sudo dnf install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel \
     kernel-headers automake gcc gtk2-devel VirtualGL VirtualGL.i686
-    yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora22/noarch/bumblebee-release-1.2-1.noarch.rpm
-    yum install bbswitch bumblebee
-    yum install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora22/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
-    yum install bumblebee-nvidia primus primus.i686
+    sudo dnf install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora22/noarch/bumblebee-release-1.2-1.noarch.rpm
+    sudo dnf install bbswitch bumblebee
+    sudo dnf install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora22/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
+    sudo dnf install bumblebee-nvidia primus primus.i686
 
 ## ksuperkey
 
