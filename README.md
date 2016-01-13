@@ -123,7 +123,8 @@
 
 ### Installation
 
-    sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
+	sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
+	cd ~/Downloads
     git clone https://github.com/hanschen/ksuperkey.git
     cd ksuperkey
     make
@@ -131,17 +132,16 @@
     
 ### Autostart
 
-    ksuperkey -e 'Super_L=Alt_L|F2'
+    ksuperkey -e 'Super_L=Alt_L|F1'
     
-
 [Github hanschen](https://github.com/hanschen/ksuperkey)
 
 ### TLP
 
 #### Configure Repo
 
-	dnf install http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
-	dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+	sudo dnf install http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
+	sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
 #### Installation
 
@@ -149,12 +149,11 @@
 
 [Linrunner.de](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation)
 
-
 ### VirtualBox
 
-	dnf install akmod-irtualbox virtualbox dkms
-	usermod -a -G vboxusers $USER
-	systemctl enable dkms
+	sudo dnf install akmod-virtualbox virtualbox dkms
+	sudo usermod -a -G vboxusers $USER
+	sudo systemctl enable dkms
 
 ### HandBrake 
 
@@ -164,25 +163,13 @@
 
 [Negativo17](http://negativo17.org/skype-and-skype-pidgin-plugin/)
 
-
-### Gnome Encfs Manager
-
-	cd /etc/yum.repos.d/
-	wget http://download.opensuse.org/repositories/home:moritzmolch:gencfsm/Fedora_20/home:moritzmolch:gencfsm.repo
-	dnf install gnome-encfs-manager
-
-[Project Homepage](http://www.libertyzero.com/GEncfsM/)
-
-[OBS mortizmolch](http://software.opensuse.org/download.html?project=home:moritzmolch:gencfsm&package=gnome-encfs-manager)
-
 ### Genymotion
 
 	./genymotion-2.2.1_x64.bin
 
-
 ### SoundKonverter
 
-[Github HessiJames](https://github.com/HessiJames/soundkonverter/wiki/Installing-soundKonverter#precompiled_packages)
+	sudo dnf install soundkonverter
 
 ### reStructuredText
 
