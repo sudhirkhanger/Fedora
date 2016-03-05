@@ -215,3 +215,12 @@
 	~/.bashrc
 	# VDAPU Support
 	export VDPAU_DRIVER=va_gl
+
+### How to disable Intel DRI3 and use Intel DRI2
+
+    /etc/X11/xorg.conf.d/20-intel.conf
+    Section     "Device"
+    Identifier  "Intel_Graphics"
+    Driver      "intel"
+    Option      "DRI" "2"
+    EndSection
