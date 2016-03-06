@@ -1,6 +1,7 @@
 # Personal Fedora Notes
 
 * [Java](#java)
+ * [Oracle JDK 8](#oracle java 8)
 
 ## Java
 
