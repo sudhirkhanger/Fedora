@@ -1,11 +1,11 @@
 # Personal Fedora Notes
 
 * [Java](#java)
- * [Oracle JDK 8](#oracle java 8)
+ * [Oracle JDK 8](#Oracle Java 8)
 
 ## Java
 
-### OpenJDK 8
+### Open JDK 8
 
 	sudo dnf install java-1.8.0-openjdk.x86_64 icedtea-web.x86_64
 
