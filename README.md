@@ -1,5 +1,7 @@
 # Personal Fedora Notes
 
+* [Java](#java)
+
 ## Java
 
 ### OpenJDK 8
