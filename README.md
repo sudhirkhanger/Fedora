@@ -166,17 +166,6 @@
 
 [Linrunner.de](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation)
 
-### VirtualBox
-
-    sudo dnf install akmod-virtualbox virtualbox dkms kernel-devel.x86_64
-    sudo usermod -a -G vboxusers $USER
-    sudo systemctl enable dkms
-	
-#### dkms
-
-    sudo akmods
-    sudo dracut -v -f
-
 ### Speed up LibreOffice
 
     sudo dnf group install LibreOffice
@@ -221,7 +210,15 @@
     /etc/abrt/plugins/oops.conf
     OnlyFatalMCE = yes
 
-## Oracle VirtualBox
+## VirtualBox
+
+### RPMFusion
+
+    sudo dnf install akmod-virtualbox virtualbox dkms kernel-devel.x86_64
+    sudo usermod -a -G vboxusers $USER
+    sudo systemctl enable dkms
+    
+### Oracle's
 
     wget https://www.virtualbox.org/download/oracle_vbox.asc
     sudo rpm --import oracle_vbox.asc
@@ -231,6 +228,12 @@
     wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
     sudo dnf install VirtualBox-5.0
     sudo /usr/lib/virtualbox/vboxdrv.sh setup
+    
+### Rebuild
+
+    sudo akmods
+    sudo dracut -v -f
+    
 
 [Source](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
