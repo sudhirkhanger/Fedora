@@ -127,15 +127,6 @@
     
 [Fedy](https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh)
 
-## Bumblebee
-
-    sudo dnf install libbsd-devel libbsd glibc-devel libX11-devel help2man autoconf git tar glib2 glib2-devel kernel-devel \
-    kernel-headers automake gcc gtk2-devel VirtualGL VirtualGL.i686
-    sudo dnf install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora22/noarch/bumblebee-release-1.2-1.noarch.rpm
-    sudo dnf install bbswitch bumblebee
-    sudo dnf install http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora22/noarch/bumblebee-nonfree-release-1.2-1.noarch.rpm
-    sudo dnf install bumblebee-nvidia primus primus.i686
-
 ## ksuperkey
 
 ### Installation
