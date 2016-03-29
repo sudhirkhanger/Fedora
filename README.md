@@ -49,8 +49,8 @@
 	alternatives --config javac
 	alternatives --config jar
 	
-* Best version
-+ Current version
+    * Best version
+    + Current version
 
 
 [Oracle Docs](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm)
