@@ -313,3 +313,10 @@
 ### Skype
 
 [Negativo17](http://negativo17.org/skype-and-skype-pidgin-plugin/)
+
+### Qt Online Installer
+
+    sudo dnf group install "C Development Tools and Libraries"
+    sudo dnf install mesa-libGl-devel
+
+[Source](https://doc.qt.io/qt-5/linux.html)
