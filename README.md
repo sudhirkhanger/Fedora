@@ -320,3 +320,11 @@
     sudo dnf install mesa-libGl-devel
 
 [Source](https://doc.qt.io/qt-5/linux.html)
+
+### Suspend to Disk
+
+    sudo nano /etc/default/grub
+    sudo blkid
+    GRUB_CMDLINE_LINUX="resume=UUID="swap-partition-uuid"
+    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+	
