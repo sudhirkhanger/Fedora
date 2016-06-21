@@ -270,7 +270,7 @@
 
 ## Fonts
 
-    sudo dnf install levien-inconsolata-fonts google-noto-sans-fonts adobe-source-code-pro-fonts.noarch
+    sudo dnf install levien-inconsolata-fonts google-noto-sans-fonts adobe-source-code-pro-fonts.noarch adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch
     
 ## Telegram
 
@@ -328,3 +328,18 @@
     GRUB_CMDLINE_LINUX="resume=UUID="swap-partition-uuid"
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 	
+## Rar support
+
+    sudo dnf install unar
+
+## Multimedia
+
+    sudo dnf install pavucontrol.x86_64
+
+## Plugins
+
+    sudo dnf install kipi-plugins
+
+## Work in progress i3 packages
+
+    i3, xterm, network-manager-applet, pcmanfm-qt, qt5ct, qterminal
