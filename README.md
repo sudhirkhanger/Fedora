@@ -293,10 +293,10 @@
     sudo dnf copr enable rdieter/Skrooge
     sudo dnf install skrooge
 
-## Backintime
+## Backup
 
-    sudo dnf copr enable mhoeher/backintime
     sudo dnf install backintime-qt4
+    sudo dnf install deja-dup
 
 ## Redshift
 
