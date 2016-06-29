@@ -240,7 +240,18 @@
     gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
     gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
     gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
-    
+
+### Alternative Codecs from UnitedRPMs
+
+    GNOME with gstreamer
+    sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+    Plasma with gstreamer
+    sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+    Plasma with Phonon
+    sudo dnf install phonon-qt5-backend-gstreamer phonon-backend-gstreamer
+
+[The Linux Home Front Project](https://tlhp.cf/unitedrpms-rpmfusion-alternative/)
+
 ### VA-API
 
     sudo dnf install libva.x86_64 libva-utils.x86_64 libva-intel-driver.x86_64
