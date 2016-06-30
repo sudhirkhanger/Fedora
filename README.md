@@ -295,7 +295,6 @@
 
 ## Backup
 
-    sudo dnf install backintime-qt4
     sudo dnf install deja-dup
 
 ## Redshift
@@ -351,6 +350,6 @@
 
     sudo dnf install kipi-plugins
 
-## Work in progress i3 packages
+## Nodejs
 
-    i3, xterm, network-manager-applet, pcmanfm-qt, qt5ct, qterminal
+    sudo dnf install nodejs
