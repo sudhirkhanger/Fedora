@@ -87,9 +87,10 @@
 	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
 	chmod a+r /etc/udev/rules.d/51-android.rules
 
-#### Virtualization
+#### Virtualization (Only one)
 
     sudo dnf install @virtualization
+    sudo dnf install qemu-kvm libvirt bridge-utils
 
 #### Documentation
 
@@ -265,7 +266,7 @@
     
 ## Apps
 
-    sudo dnf install keepassx owncloud-client yakuake calibre gnucash emacs emacs-goodies
+    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies
 
 ## Utilities
 
@@ -295,7 +296,7 @@
 
 ## Backup
 
-    sudo dnf install deja-dup
+    sudo dnf install backintime-qt4
 
 ## Redshift
 
