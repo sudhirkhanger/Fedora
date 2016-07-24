@@ -170,7 +170,7 @@
 ### Google Chrome
 
 	sudo dnf install google-chrome-stable google-talkplugin libappindicator.i686 libappindicator.x86_64 libappindicator-gtk3.i686 libappindicator-gtk3.x86_64
-        sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+    sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 ## Graphics
 
@@ -278,22 +278,13 @@
 
 ## KDE Utilities
 
-    sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers
+    sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers ffmpegthumbs
 
 ## Fonts
 
-    sudo dnf install levien-inconsolata-fonts google-noto-sans-fonts adobe-source-code-pro-fonts.noarch adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch
+    sudo dnf install levien-inconsolata-fonts google-noto-sans-fonts adobe-source-code-pro-fonts.noarch \
+    adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts google-noto-sans-old-turkic-fonts
     
-## Telegram
-
-    sudo dnf copr enable rommon/telegram
-    sudo dnf install telegram-desktop
-
-## Skrooge
-
-    sudo dnf copr enable rdieter/Skrooge
-    sudo dnf install skrooge
-
 ## Backup
 
     sudo dnf install backintime-qt4
