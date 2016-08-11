@@ -266,7 +266,7 @@
     
 ## Apps
 
-    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies
+    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies handbrake-gui
 
 ## Utilities
 
@@ -274,7 +274,7 @@
 
 ## KDE Apps
 
-    sudo dnf install digikam soundkonverter
+    sudo dnf install digikam soundkonverter qupzilla
 
 ## KDE Utilities
 
@@ -345,3 +345,24 @@
 ## Nodejs
 
     sudo dnf install nodejs
+
+## Apps
+
+    sudo dnf install pencil
+
+## Networking
+
+    sudo dnf install nmap
+
+## Browsers
+
+    sudo dnf install chromium
+	
+## Screencasting
+    
+    sudo dnf install key-mon simplescreenrecorder.x86_64
+	
+## UnitedRPMs
+
+    su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-2.noarch.rpm'
+    su -c 'rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-24'
