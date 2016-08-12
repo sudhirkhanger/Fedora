@@ -169,8 +169,11 @@
 
 ### Google Chrome
 
-	sudo dnf install google-chrome-stable google-talkplugin libappindicator.i686 libappindicator.x86_64 libappindicator-gtk3.i686 libappindicator-gtk3.x86_64
-    sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+	sudo dnf install google-chrome-stable google-talkplugin chrome-remote-desktop \
+	libappindicator.i686 libappindicator.x86_64 libappindicator-gtk3.i686 \
+	libappindicator-gtk3.x86_64
+    
+	sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 ## Graphics
 
@@ -274,8 +277,8 @@
 
 ## KDE Apps
 
-    sudo dnf install digikam soundkonverter qupzilla
-
+    sudo dnf install digikam soundkonverter
+	
 ## KDE Utilities
 
     sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers ffmpegthumbs
@@ -354,10 +357,6 @@
 
     sudo dnf install nmap
 
-## Browsers
-
-    sudo dnf install chromium
-	
 ## Screencasting
     
     sudo dnf install key-mon simplescreenrecorder.x86_64
