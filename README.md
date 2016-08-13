@@ -365,3 +365,14 @@
 
     su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-2.noarch.rpm'
     su -c 'rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-24'
+
+## GTK+ White on white bug
+
+    nano ~/.gtkrc-2.0-kde4
+    
+    style "gnome-color-chooser-tooltips"
+    {
+    bg[NORMAL] = "#FFFFAF"
+    fg[NORMAL] = "#000000"
+    }
+    widget "gtk-tooltip*" style "gnome-color-chooser-tooltips"
