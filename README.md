@@ -128,23 +128,6 @@
     
 [Fedy](https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh)
 
-## ksuperkey
-
-### Installation
-
-    sudo yum install git gcc make libX11-devel libXtst-devel pkgconfig
-    cd ~/Downloads
-    git clone https://github.com/hanschen/ksuperkey.git
-    cd ksuperkey
-    make
-    sudo make install
-    
-### Autostart
-
-    ksuperkey -e 'Super_L=Alt_L|F1'
-    
-[Github hanschen](https://github.com/hanschen/ksuperkey)
-
 ### TLP
 
 #### Configure Repo
