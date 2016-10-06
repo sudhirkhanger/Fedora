@@ -219,7 +219,7 @@
 
 ### Players
 
-    sudo dnf install vlc clementine
+    sudo dnf install vlc clementine smplayer mpv
     
 ### Media Codecs
 
