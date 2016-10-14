@@ -219,7 +219,7 @@
 
 ### Players
 
-    sudo dnf install vlc clementine smplayer mpv
+    sudo dnf install vlc clementine
     
 ### Media Codecs
 
@@ -252,11 +252,11 @@
     
 ## Apps
 
-    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies handbrake-gui
+    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies
 
 ## Utilities
 
-    sudo dnf install wine youtube-dl akmods htop powertop python3-dnf-plugins-extras-tracer.noarch
+    sudo dnf install wine youtube-dl akmods htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt
 
 ## KDE Apps
 
