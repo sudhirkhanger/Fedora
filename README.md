@@ -27,6 +27,12 @@
 #### Upgrade
 
 	rpm -Uvh jdk-8u25-linux-x64.rpm
+	
+#### Using Dnf
+
+    sudo dnf install jdk-8u112-linux-x64.rpm
+	
+This will do same as install
 
 #### Setup environmental variables
 
@@ -52,6 +58,13 @@
     * Best version
     + Current version
 
+Note from Oracle - Starting with version 8u40, the JDK installation is integrated with the alternatives framework and after installation, the alternatives framework is updated to reflect the binaries from the recently installed JDK. Java commands such as java, javac, javadoc, and javap can be invoked from the command line.
+
+#### Plugin
+
+    ln -s /usr/java/default/jre/lib/amd64/libnpjp2.so /home/sudhir/.mozilla/plugins
+	
+[Manual Installation and Registration of Java Plugin for Linux](http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html)
 
 [Oracle Docs](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm)
 
