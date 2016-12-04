@@ -180,6 +180,10 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 ### Inkscape
 
     sudo dnf install inkscape
+	
+### ImageMagick
+
+    sudo dnf install ImageMagick
 
 ### How to disable Intel DRI3 and use Intel DRI2
 
@@ -269,7 +273,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ## Utilities
 
-    sudo dnf install wine youtube-dl akmods htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt
+    sudo dnf install wine youtube-dl akmods htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc
 
 ## KDE Apps
 
