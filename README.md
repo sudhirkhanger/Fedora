@@ -376,3 +376,8 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
     fg[NORMAL] = "#000000"
     }
     widget "gtk-tooltip*" style "gnome-color-chooser-tooltips"
+
+## Write disk using ddrescue
+
+    sudo dnf install ddrescue
+    sudo ddrescue -D --force kubuntu-16.04.1-desktop-amd64.iso /dev/sdb
