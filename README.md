@@ -76,6 +76,12 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ### Android
 
+#### Latest Android Studio dependencies
+
+    sudo dnf install zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
+
+	[Troubleshoot Android Studio - Linux libraries](https://developer.android.com/studio/troubleshoot.html#project_sync_issues)
+	
 #### Android SDK Dependencies
 
 	sudo dnf install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
