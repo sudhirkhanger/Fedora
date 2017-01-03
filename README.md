@@ -5,11 +5,11 @@
 
 ## Remove
 
-    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror ksnapshot krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs xorg-x11-drv-libinput
+    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror ksnapshot krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs
     
 ## Install
 
-    sudo dnf install kde-gtk-config plasma-user-manager spectacle gnome-icon-theme breeze-gtk
+    sudo dnf install gnome-icon-theme breeze-gtk
 
 ## Java
 
@@ -291,7 +291,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ## Fonts
 
-    sudo dnf install levien-inconsolata-fonts google-noto-sans-fonts adobe-source-code-pro-fonts.noarch \
+    sudo dnf install levien-inconsolata-fonts adobe-source-code-pro-fonts.noarch \
     adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts google-noto-sans-old-turkic-fonts
     
 ## Backup
