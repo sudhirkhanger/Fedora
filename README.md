@@ -5,7 +5,7 @@
 
 ## Remove
 
-    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror ksnapshot krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla
+    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla krdc krfb 
     
 ## Install
 
@@ -81,7 +81,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
     sudo dnf install zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
 
 [Troubleshoot Android Studio - Linux libraries](https://developer.android.com/studio/troubleshoot.html#project_sync_issues)
-	
+	https://stackoverflow.com/questions/16590216/how-to-increase-the-font-size-in-android-studio
 #### Android SDK Dependencies
 
 	sudo dnf install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
