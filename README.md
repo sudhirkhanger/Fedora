@@ -109,7 +109,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 #### Virtualization (Only one)
 
     sudo dnf install @virtualization
-    sudo dnf install qemu-kvm libvirt bridge-utils
+    sudo dnf install qemu-kvm libvirt
 
 #### Documentation
 
@@ -279,7 +279,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ## Utilities
 
-    sudo dnf install wine youtube-dl akmods htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc
+    sudo dnf install wine youtube-dl htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc
 
 ## KDE Apps
 
