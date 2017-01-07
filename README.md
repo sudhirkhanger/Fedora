@@ -156,7 +156,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 #### Installation
 
-	sudo yum install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel
+	sudo dnf install tlp tlp-rdw akmod-tp_smapi akmod-acpi_call kernel-devel
 
 [Linrunner.de](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation)
 
