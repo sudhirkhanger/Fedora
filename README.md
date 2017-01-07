@@ -275,7 +275,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
     
 ## Apps
 
-    sudo dnf install keepassx owncloud-client yakuake calibre emacs emacs-goodies
+    sudo dnf install keepassx nextcloud-client yakuake calibre emacs emacs-goodies
 
 ## Utilities
 
