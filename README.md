@@ -300,7 +300,7 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ## Redshift
 
-    sudo dnf install redshift plasma-workspace-geolocation.x86_64
+    sudo dnf install redshift
 
 ### reStructuredText
 
