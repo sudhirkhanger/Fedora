@@ -5,7 +5,7 @@
 
 ## Remove
 
-    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla krdc krfb 
+    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla krdc krfb kruler
     
 ## Install
 
@@ -183,13 +183,9 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
     sudo dnf install gimp.x86_64 gmic-gimp.x86_64 gimp-help.noarch gimp-resynthesizer.x86_64
 
-### Inkscape
+### Design
 
-    sudo dnf install inkscape
-	
-### ImageMagick
-
-    sudo dnf install ImageMagick
+    sudo dnf install inkscape.x86_64 pencil.x86_64
 
 ### How to disable Intel DRI3 and use Intel DRI2
 
@@ -215,20 +211,34 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 
 ### RPMFusion
 
-    sudo dnf install akmod-virtualbox virtualbox dkms kernel-devel.x86_64
+    sudo dnf install VirtualBox kernel-devel-$(uname -r) akmod-VirtualBox
     sudo usermod -a -G vboxusers $USER
-    sudo systemctl enable dkms
+
+    //Generate VirtualBox modules
+    sudo akmods --force
+    systemctl restart systemd-modules-load.service
+    dmesg | grep -i vbox
     
-### Oracle's
+    [Source](https://rpmfusion.org/Howto/VirtualBox)
+    
+### Oracle's VirtualBox
 
     wget https://www.virtualbox.org/download/oracle_vbox.asc
     sudo rpm --import oracle_vbox.asc
 
     sudo dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
-    cd /etc/yum.repos.d/
+
+	cd /etc/yum.repos.d/
     wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
-    sudo dnf install VirtualBox-5.0
-    sudo /usr/lib/virtualbox/vboxdrv.sh setup
+
+	sudo dnf install VirtualBox-5.0
+
+	sudo /usr/lib/virtualbox/vboxdrv.sh setup
+	
+### VirtualBox Guest Additions
+
+    sudo dnf -y install gcc automake make kernel-headers kernel-devel perl
+    sudo /run/media/user/VBOXADDITIONS*/VBoxLinuxAdditions.run
     
 ### Rebuild
 
@@ -275,11 +285,12 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
     
 ## Apps
 
-    sudo dnf install keepassx nextcloud-client yakuake calibre emacs emacs-goodies
+    sudo dnf install keepassx calibre emacs emacs-goodies
 
 ## Utilities
 
-    sudo dnf install wine youtube-dl htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc
+    sudo dnf install youtube-dl htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc \
+    nmap ImageMagick redshift backintime-qt4
 
 ## KDE Apps
 
@@ -287,20 +298,12 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
 	
 ## KDE Utilities
 
-    sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers ffmpegthumbs
+    sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers ffmpegthumbs unar kio_mtp
 
 ## Fonts
 
     sudo dnf install levien-inconsolata-fonts adobe-source-code-pro-fonts.noarch \
     adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts google-noto-sans-old-turkic-fonts
-    
-## Backup
-
-    sudo dnf install backintime-qt4
-
-## Redshift
-
-    sudo dnf install redshift
 
 ### reStructuredText
 
@@ -338,34 +341,18 @@ Note from Oracle - Starting with version 8u40, the JDK installation is integrate
     sudo blkid
     GRUB_CMDLINE_LINUX="resume=UUID="swap-partition-uuid"
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-	
-## Rar support
-
-    sudo dnf install unar
-
-## Multimedia
-
-    sudo dnf install pavucontrol.x86_64
-
-## Plugins
-
-    sudo dnf install kipi-plugins
 
 ## Nodejs
 
     sudo dnf install nodejs
 
-## Apps
-
-    sudo dnf install pencil
-
-## Networking
-
-    sudo dnf install nmap
-
 ## Screencasting
     
     sudo dnf install key-mon simplescreenrecorder.x86_64
+    
+## Video Editing
+
+    sudo dnf install kdenlive fri0r-plugins obs-studio
 	
 ## UnitedRPMs
 
