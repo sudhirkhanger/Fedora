@@ -5,7 +5,7 @@
 
 ## Remove
 
-    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla krdc krfb kruler
+    sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs calligra-kdchart calligra-libs qupzilla krdc krfb kruler kcolorchooser
     
 ## Install
 
