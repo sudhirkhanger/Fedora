@@ -41,7 +41,7 @@
 	export JAVA_HOME=/usr/java/default/
 	export PATH=$JAVA_HOME/bin:$PATH
 
-Source [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html#BJFJHFDD)
+Source: [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html#BJFJHFDD)
 
 ### Android
 
@@ -49,18 +49,7 @@ Source [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_
 
     sudo dnf install zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
 
-[Troubleshoot Android Studio - Linux libraries](https://developer.android.com/studio/troubleshoot.html#project_sync_issues)
-	https://stackoverflow.com/questions/16590216/how-to-increase-the-font-size-in-android-studio
-#### Android SDK Dependencies
-
-	sudo dnf install glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 \
-	ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 \
-	mesa-libGL.i686
-
-#### Android Build Dependencies
-
-	sudo dnf install gcc gcc-c++ gperf flex bison glibc-devel.{x86_64,i686} \
-	zlib-devel.{x86_64,i686} ncurses-devel.i686 readline-devel.i686 perl-Switch
+Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-libraries)
 
 #### Android SDK Environmental Variable
 
@@ -77,12 +66,7 @@ Source [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_
 
 #### Virtualization (Only one)
 
-    sudo dnf install @virtualization
     sudo dnf install qemu-kvm libvirt
-
-#### Documentation
-
-    sudo dnf install zeal
 
 ### Genymotion
 
@@ -169,7 +153,7 @@ Source [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_
 
     sudo dnf install git
     sudo dnf group install "C Development Tools and Libraries"
-    sudo dnf install cmake
+    sudo dnf install cmake zeal
 
 ## Disable MCE Check
 
