@@ -49,7 +49,26 @@ Source: [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux
 
     sudo dnf install zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
 
-Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-libraries)
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
 
 #### Android SDK Environmental Variable
 
@@ -72,11 +91,154 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 	./genymotion-2.2.1_x64.bin
 
-[Fedora Wiki HOWTO_Setup_Android_Development](https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development)
+#### Android SDK Environmental Variable
 
-[Using Hardware Devices](http://developer.android.com/tools/device.html)
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-[MORf30 Github](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+#### Android SDK Environmental Variable
+
+	~/.bashrc
+  
+	export ANDROID_HOME=/home/sudhir/Documents/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+#### udev Rules
+
+	cd /etc/udev/rules.d
+	wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
+	chmod a+r /etc/udev/rules.d/51-android.rules
+
+#### Virtualization (Only one)
+
+    sudo dnf install qemu-kvm libvirt
+
+### Genymotion
+
+	./genymotion-2.2.1_x64.bin
+
+Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-libraries) [2](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)
 
 ### Thinkfan
 ---------
