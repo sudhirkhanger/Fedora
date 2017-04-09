@@ -34,8 +34,6 @@
 
     sudo dnf install jdk-8u112-linux-x64.rpm
 	
-This will do same as install
-
 #### Setup environmental variables
 
 	emacs -nw .bashrc
@@ -43,38 +41,7 @@ This will do same as install
 	export JAVA_HOME=/usr/java/default/
 	export PATH=$JAVA_HOME/bin:$PATH
 
-#### Set Alternatives
-
-	alternatives --install /usr/bin/java java /usr/java/default/jre/bin/java 200000
-	alternatives --install /usr/bin/javaws javaws /usr/java/default/jre/bin/javaws 200000
-	alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/default/jre/lib/amd64/libnpjp2.so 200000
-	alternatives --install /usr/bin/javac javac /usr/java/default/bin/javac 200000
-	alternatives --install /usr/bin/jar jar /usr/java/default/bin/jar 200000
-
-	alternatives --config java
-	alternatives --config javaws
-	alternatives --config libjavaplugin.so.x86_64
-	alternatives --config javac
-	alternatives --config jar
-	
-    * Best version
-    + Current version
-
-Note from Oracle - Starting with version 8u40, the JDK installation is integrated with the alternatives framework and after installation, the alternatives framework is updated to reflect the binaries from the recently installed JDK. Java commands such as java, javac, javadoc, and javap can be invoked from the command line.
-
-#### Plugin
-
-    ln -s /usr/java/default/jre/lib/amd64/libnpjp2.so /home/sudhir/.mozilla/plugins
-	
-[Manual Installation and Registration of Java Plugin for Linux](http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html)
-
-[Oracle Docs](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html#install-64-rpm)
-
-[if-not-true-then-false.com](http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/)
-
-[Fedora Forums](http://forums.fedoraforum.org/showthread.php?t=297016)
-
-[John Goltzer Blogspot](http://johnglotzer.blogspot.in/2012/09/alternatives-install-gets-stuck-failed.html)
+Source [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html#BJFJHFDD)
 
 ### Android
 
