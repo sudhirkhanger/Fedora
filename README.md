@@ -131,7 +131,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Design
 
-    sudo dnf install inkscape.x86_64 pencil.x86_64
+    sudo dnf install inkscape.x86_64 pencil
 
 ### How to disable Intel DRI3 and use Intel DRI2
 
@@ -277,7 +277,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### Qt Online Installer
 
     sudo dnf group install "C Development Tools and Libraries"
-    sudo dnf install mesa-libGl-devel
+    sudo dnf install mesa-libGL-devel
 
 [Source](https://doc.qt.io/qt-5/linux.html)
 
@@ -298,7 +298,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     
 ## Video Editing
 
-    sudo dnf install kdenlive fri0r-plugins obs-studio
+    sudo dnf install kdenlive frei0r-plugins obs-studio
 	
 ## UnitedRPMs
 
@@ -320,3 +320,25 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
     sudo dnf install ddrescue
     sudo ddrescue -D --force kubuntu-16.04.1-desktop-amd64.iso /dev/sdb
+
+## Gradle
+
+	sudo dnf install gradle
+
+## Tmux
+
+	sudo dnf install tmux
+
+## Disable Horizontal Scrolling
+
+    /etc/X11/xorg.conf.d/30-touchpad.conf
+    Section "InputClass"
+        Identifier "Disable Horizontal Scrolling"
+        MatchIsTouchpad "on"
+        MatchDriver "libinput"
+        Option "HorizontalScrolling" "false"
+	EndSection
+
+## Node
+
+    sudo dnf install npm node
