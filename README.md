@@ -71,28 +71,6 @@ Source: [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux
 
 Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-libraries) [2](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)
 
-### Thinkfan
----------
-
-#### Install and enable systemd file
-
-	sudo dnf install thinkfan lm_sensors
-	sudo sensors-detect
-	sudo systemctl enable thinkfan
-
-#### Modify config and add output of following command to it prefixing with ``sensors``
-
-	find /sys/devices -type f -name "temp*_input"
-  
-	/etc/thinkfan.conf
-    ---------------------------------------------------------------
-	sensor /sys/devices/virtual/hwmon/hwmon0/temp1_input
-	sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
-	sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-	sensor /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
-    
-[Fedy](https://github.com/satya164/fedy/blob/master/plugins/util/media_codecs.sh)
-
 ### TLP
 
 #### Configure Repo
