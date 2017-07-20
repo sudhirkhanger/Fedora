@@ -127,10 +127,10 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf install VirtualBox kernel-devel-$(uname -r) akmod-VirtualBox
     sudo usermod -a -G vboxusers $USER
 
-    //Generate VirtualBox modules
+#### Generate VirtualBox modules
+
     sudo akmods --force
     systemctl restart systemd-modules-load.service
-    dmesg | grep -i vbox
     
     [Source](https://rpmfusion.org/Howto/VirtualBox)
     
@@ -157,7 +157,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
     sudo akmods
     sudo dracut -v -f
-    
+	sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg	
 
 [Source](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
