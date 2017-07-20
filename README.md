@@ -193,22 +193,33 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### VA-API
 
     sudo dnf install libva.x86_64 libva-utils.x86_64 libva-intel-driver.x86_64
-    
+
+#### Check Status
+
+	vainfo
+
 ### VDPAU
 
     sudo dnf install vdpauinfo libva-vdpau-driver libvdpau-va-gl libva-utils
-    ~/.bashrc
+
+#### Config
+
+	emacs -nw ~/.bashrc
     # VDAPU Support
     export VDPAU_DRIVER=va_gl
-    
+
+#### Check Status
+
+	vdpauinfo
+
 ## Apps
 
-    sudo dnf install keepassx calibre emacs emacs-goodies
+    sudo dnf install keepassxc calibre emacs
 
 ## Utilities
 
     sudo dnf install youtube-dl htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc \
-    nmap ImageMagick redshift backintime-qt4
+    nmap ImageMagick redshift
 
 ## KDE Apps
 
