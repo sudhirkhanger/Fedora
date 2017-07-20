@@ -321,7 +321,3 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
         MatchDriver "libinput"
         Option "HorizontalScrolling" "false"
 	EndSection
-
-## Node
-
-    sudo dnf install npm node
