@@ -176,12 +176,17 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Alternative Codecs from UnitedRPMs
 
-    GNOME with gstreamer
+#### GNOME with gstreamer
+    
+	sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+    
+#### Plasma with gstreamer
+
     sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-    Plasma with gstreamer
-    sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-    Plasma with Phonon
-    sudo dnf install phonon-qt5-backend-gstreamer phonon-backend-gstreamer
+
+#### Plasma with Phonon
+    
+	sudo dnf install phonon-qt5-backend-gstreamer phonon-backend-gstreamer
 
 [The Linux Home Front Project](https://tlhp.cf/unitedrpms-rpmfusion-alternative/)
 
