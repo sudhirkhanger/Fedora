@@ -87,7 +87,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### Speed up LibreOffice
 
     sudo dnf group install LibreOffice
-    sudo dnf install libreoffice-kde
 
 - Undo steps 20 or 30 steps
 - Under Graphics cache, set Use for LibreOffice to 128 MB
@@ -110,15 +109,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### Design
 
     sudo dnf install inkscape.x86_64 pencil
-
-### How to disable Intel DRI3 and use Intel DRI2
-
-    /etc/X11/xorg.conf.d/20-intel.conf
-    Section     "Device"
-    Identifier  "Intel_Graphics"
-    Driver      "intel"
-    Option      "DRI" "2"
-    EndSection
 
 ## Developmental
 
