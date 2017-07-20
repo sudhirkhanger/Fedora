@@ -218,8 +218,8 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Utilities
 
-    sudo dnf install youtube-dl htop powertop python3-dnf-plugins-extras-tracer.noarch autokey-qt pandoc \
-    nmap ImageMagick redshift
+    sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch autokey-qt pandoc \
+    nmap ImageMagick
 
 ## KDE Apps
 
@@ -273,7 +273,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Nodejs
 
-    sudo dnf install nodejs
+    sudo dnf install nodejs npm
 
 ## Screencasting
     
