@@ -112,9 +112,8 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Developmental
 
-    sudo dnf install git
+    sudo dnf install git cmake zeal
     sudo dnf group install "C Development Tools and Libraries"
-    sudo dnf install cmake zeal
 
 ## Disable MCE Check
 
