@@ -155,7 +155,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     
 ### Rebuild
 
-    sudo akmods
+    sudo akmods --force
     sudo dracut -v -f
 	sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg	
 
