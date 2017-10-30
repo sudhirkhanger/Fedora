@@ -321,3 +321,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
         MatchDriver "libinput"
         Option "HorizontalScrolling" "false"
 	EndSection
+
+## SQLite
+
+    sudo dnf install sqlitebrowser
