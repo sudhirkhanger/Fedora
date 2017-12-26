@@ -154,7 +154,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
     sudo akmods --force
     sudo dracut -v -f
-	sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg	
+    sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 
 [Source](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
@@ -201,7 +201,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 #### Config
 
-	emacs -nw ~/.bashrc
+    emacs -nw ~/.bashrc
     # VDAPU Support
     export VDPAU_DRIVER=va_gl
 
@@ -266,7 +266,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo nano /etc/default/grub
     sudo blkid
     GRUB_CMDLINE_LINUX="resume=UUID="swap-partition-uuid"
-    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+    sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 
 ## Nodejs
 
