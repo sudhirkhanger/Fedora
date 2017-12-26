@@ -94,10 +94,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Google Chrome
 
-	sudo dnf install google-chrome-stable google-talkplugin chrome-remote-desktop \
-	libappindicator.i686 libappindicator.x86_64 libappindicator-gtk3.i686 \
-	libappindicator-gtk3.x86_64
-    
+	sudo dnf install google-chrome-stable    
 	sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 ## Graphics
