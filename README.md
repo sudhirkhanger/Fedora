@@ -324,11 +324,14 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf install sqlitebrowser
 
 * ~/.bashrc
-* ssh
+* .ssh
 * npm
-* emacs
+* .emacs.d
 * .face.icon
 * .gitconfig
-* history
+* bash history
 * xresources
-* 
+* darcula theme - konsole, emacs, possibly kwrite
+* ~/.local/scripts
+* ~/.gradle/gradle.properties
+* libinput horizontal scroll
