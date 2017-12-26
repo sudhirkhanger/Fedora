@@ -189,7 +189,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### VA-API
 
-    sudo dnf install libva.x86_64 libva-utils.x86_64 libva-intel-driver.x86_64
+    sudo dnf install libva.x86_64 libva-utils.x86_64 libva-intel-driver.x86_64 libva-intel-hybrid-driver
 
 #### Check Status
 
