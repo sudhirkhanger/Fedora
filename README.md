@@ -6,7 +6,7 @@
 ## Remove
 
     sudo dnf remove kmahjongg kmines kpat kolourpaint konqueror krusader liveusb-creator amarok-libs \
-    calligra-kdchart calligra-libs qupzilla krdc krfb kruler kcolorchooser dnfdragora
+    calligra-libs qupzilla krdc krfb kruler kcolorchooser dnfdragora konqueror
     
 ## Install
 
@@ -325,3 +325,13 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## SQLite
 
     sudo dnf install sqlitebrowser
+
+* ~/.bashrc
+* ssh
+* npm
+* emacs
+* .face.icon
+* .gitconfig
+* history
+* xresources
+* 
