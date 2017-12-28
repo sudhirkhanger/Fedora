@@ -109,7 +109,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Developmental
 
-    sudo dnf install git cmake zeal
+    sudo dnf install git cmake zeal tmux sqlitebrowser
     sudo dnf group install "C Development Tools and Libraries"
 
 ## Disable MCE Check
@@ -158,6 +158,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 [Source](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
+
 ## Multimedia
 
 ### Players
@@ -170,22 +171,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
     gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
     gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
-
-### Alternative Codecs from UnitedRPMs
-
-#### GNOME with gstreamer
-    
-	sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-    
-#### Plasma with gstreamer
-
-    sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-
-#### Plasma with Phonon
-    
-	sudo dnf install phonon-qt5-backend-gstreamer phonon-backend-gstreamer
-
-[The Linux Home Front Project](https://tlhp.cf/unitedrpms-rpmfusion-alternative/)
 
 ### VA-API
 
@@ -209,6 +194,31 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 	vdpauinfo
 
+---
+
+### Alternative Codecs from UnitedRPMs
+
+#### UnitedRPMs
+
+    su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-2.noarch.rpm'
+    su -c 'rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-24'
+
+#### GNOME with gstreamer
+    
+	sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+    
+#### Plasma with gstreamer
+
+    sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+
+#### Plasma with Phonon
+    
+	sudo dnf install phonon-qt5-backend-gstreamer phonon-backend-gstreamer
+
+[The Linux Home Front Project](https://tlhp.cf/unitedrpms-rpmfusion-alternative/)
+
+---
+
 ## Apps
 
     sudo dnf install keepassxc calibre emacs
@@ -216,7 +226,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## Utilities
 
     sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch autokey-qt pandoc \
-    nmap ImageMagick
+    nmap ImageMagick lm_sensors
 
 ## KDE Apps
 
@@ -280,11 +290,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
     sudo dnf install kdenlive frei0r-plugins obs-studio
 	
-## UnitedRPMs
-
-    su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-2.noarch.rpm'
-    su -c 'rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-24'
-
 ## GTK+ White on white bug
 
     nano ~/.gtkrc-2.0-kde4
@@ -301,14 +306,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf install ddrescue
     sudo ddrescue -D --force kubuntu-16.04.1-desktop-amd64.iso /dev/sdb
 
-## Gradle
-
-	sudo dnf install gradle
-
-## Tmux
-
-	sudo dnf install tmux
-
 ## Disable Horizontal Scrolling
 
     /etc/X11/xorg.conf.d/30-touchpad.conf
@@ -318,10 +315,6 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
         MatchDriver "libinput"
         Option "HorizontalScrolling" "false"
 	EndSection
-
-## SQLite
-
-    sudo dnf install sqlitebrowser
 
 * ~/.bashrc
 * .ssh
