@@ -280,9 +280,31 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Nodejs
 
+### Installation
+
     sudo dnf install nodejs npm
 
-## Screencasting
+### Setup local npm installation
+
+The following guide has been taken from sindresorhus's GitHub [page](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
+
+    * Create npm package folder
+    mkdir "${HOME}/.npm-packages"
+
+    * Add location to `~/.npmrc` file.
+    prefix=${HOME}/.npm-packages
+
+    * Add config to `~/.bashrc` file
+    NPM_PACKAGES="${HOME}/.npm-packages"
+
+    PATH="$NPM_PACKAGES/bin:$PATH"
+
+    # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+    unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+    export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+
+### Screencasting
     
     sudo dnf install key-mon simplescreenrecorder.x86_64
     
