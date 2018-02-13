@@ -306,7 +306,7 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 
 ### Screencasting
     
-    sudo dnf install key-mon simplescreenrecorder.x86_64
+    sudo dnf install key-mon simplescreenrecorder.x86_64 ffmpeg
     
 ## Video Editing
 
