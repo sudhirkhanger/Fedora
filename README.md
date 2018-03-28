@@ -338,9 +338,9 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
         Option "HorizontalScrolling" "false"
 	EndSection
 
-## Ninja Build
+## Ninja/Meson Build
 
-    sudo dnf install ninja-build
+    sudo dnf install ninja-build meson
 	
 ---
 
