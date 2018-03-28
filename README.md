@@ -338,6 +338,12 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
         Option "HorizontalScrolling" "false"
 	EndSection
 
+## Ninja Build
+
+    sudo dnf install ninja-build
+	
+---
+
 * ~/.bashrc
 * .ssh
 * npm
