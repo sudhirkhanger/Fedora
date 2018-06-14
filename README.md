@@ -241,28 +241,11 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf install levien-inconsolata-fonts adobe-source-code-pro-fonts.noarch \
     adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts google-noto-sans-old-turkic-fonts
 
-### reStructuredText
-
-	sudo dnf install python-docutils python-sphinx
-
 ### Microsoft Core Fonts
 
     sudo yum install msttcore-fonts-installer-2.6-1.noarch.rpm
     
 [mscorefonts2 Sourceforge](http://sourceforge.net/projects/mscorefonts2/?source=typ_redirect)
-
-	
-### Flash
-
-[Negativo17](http://negativo17.org/adobe-flash-plugin/)
-
-### HandBrake 
-
-[Negativo17](http://negativo17.org/handbrake/)
-
-### Skype
-
-[Negativo17](http://negativo17.org/skype-and-skype-pidgin-plugin/)
 
 ### Qt Online Installer
 
@@ -338,10 +321,11 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
         Option "HorizontalScrolling" "false"
 	EndSection
 
-## Ninja/Meson Build
+## SDKMAN
 
-    sudo dnf install ninja-build meson
-	
+    export SDKMAN_DIR="/home/sudhir/.local/bin/sdkman" && curl -s "https://get.sdkman.io" | bash
+	sdk install gradle
+
 ---
 
 * ~/.bashrc
