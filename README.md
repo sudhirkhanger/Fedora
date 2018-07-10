@@ -122,26 +122,39 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### RPMFusion
 
     sudo dnf install VirtualBox kernel-devel-$(uname -r) akmod-VirtualBox
-    sudo usermod -a -G vboxusers $USER
 
 #### Generate VirtualBox modules
 
     sudo akmods --force
     systemctl restart systemd-modules-load.service
     
-    [Source](https://rpmfusion.org/Howto/VirtualBox)
+[Source](https://rpmfusion.org/Howto/VirtualBox)
+
+#### Rebuild
+
+    sudo akmods --force
+    sudo dracut -v -f
+    sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
     
 ### Oracle's VirtualBox
+
+#### Setup Repo
+
+	su -
+	cd /etc/yum.repos.d/
+	wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+
+#### Add key (if not installed on its own)
 
     wget https://www.virtualbox.org/download/oracle_vbox.asc
     sudo rpm --import oracle_vbox.asc
 
-    sudo dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+#### Installation
 
-	cd /etc/yum.repos.d/
-    wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
-
-	sudo dnf install VirtualBox-5.0
+	dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+	sudo dnf install VirtualBox-5.2.x86_64
+	
+#### Rebuild Module
 
 	sudo /usr/lib/virtualbox/vboxdrv.sh setup
 	
@@ -150,14 +163,11 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf -y install gcc automake make kernel-headers kernel-devel perl
     sudo /run/media/user/VBOXADDITIONS*/VBoxLinuxAdditions.run
     
-### Rebuild
-
-    sudo akmods --force
-    sudo dracut -v -f
-    sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-
 [Source](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
+### Common Add User
+
+    sudo usermod -a -G vboxusers $USER
 
 ## Multimedia
 
@@ -326,6 +336,11 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
     export SDKMAN_DIR="/home/sudhir/.local/bin/sdkman" && curl -s "https://get.sdkman.io" | bash
 	sdk install gradle
 
+## Lock a package version
+
+	sudo dnf install python3-dnf-plugin-versionlock
+	dnf versionlock add package-name
+	
 ---
 
 * ~/.bashrc
