@@ -173,7 +173,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Players
 
-    sudo dnf install vlc clementine
+    sudo dnf install vlc juk
     
 ### Media Codecs
 
