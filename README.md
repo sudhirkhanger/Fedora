@@ -109,7 +109,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Developmental
 
-    sudo dnf install git cmake zeal tmux sqlitebrowser
+    sudo dnf install git cmake tmux sqlitebrowser
     sudo dnf group install "C Development Tools and Libraries"
 
 ## Disable MCE Check
@@ -231,11 +231,11 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Apps
 
-    sudo dnf install keepassxc calibre emacs
+    sudo dnf install keepassxc emacs
 
 ## Utilities
 
-    sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch autokey-qt pandoc \
+    sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch pandoc \
     nmap ImageMagick lm_sensors unrar
 
 ## KDE Apps
