@@ -340,6 +340,10 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 
 	sudo dnf install python3-dnf-plugin-versionlock
 	dnf versionlock add package-name
+
+## Write ISO to the usb
+
+	sudo dd bs=4M if=Fedora-KDE-Live-x86_64-28-1.1.iso of=/dev/sda status=progress oflag=direct
 	
 ---
 
@@ -355,3 +359,4 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 * ~/.local/scripts
 * ~/.gradle/gradle.properties
 * libinput horizontal scroll
+* sdkmann
