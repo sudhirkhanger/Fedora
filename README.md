@@ -16,7 +16,8 @@
 
 ### OpenJDK Complete
 
-	sudo dnf install java-openjdk.x86_64 java-openjdk-devel.x86_64 java-openjdk-javadoc.x86_64
+	sudo dnf install java-openjdk.x86_64 java-openjdk-devel.x86_64 java-openjdk-javadoc.x86_64 \
+	java-openjdk-demo.x86_64
 
 ### Open JDK 8
 
