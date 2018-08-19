@@ -14,12 +14,15 @@
 
 ## Java
 
+### OpenJDK Complete
+
+	sudo dnf install java-openjdk.x86_64 java-openjdk-devel.x86_64 java-openjdk-javadoc.x86_64
+
 ### Open JDK 8
 
-    sudo dnf install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64 java-1.8.0-openjdk-demo.x86_64 \
-    java-1.8.0-openjdk-javadoc.noarch icedtea-web
-
-### Oracle Java 8
+    sudo dnf install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64 java-1.8.0-openjdk-demo.x86_64
+	
+### Oracle JDK 8
 
 #### Install
 
