@@ -253,7 +253,8 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## Fonts
 
     sudo dnf install levien-inconsolata-fonts adobe-source-code-pro-fonts.noarch \
-    adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts google-noto-sans-old-turkic-fonts
+    adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts \
+	google-noto-sans-old-turkic-fonts mozilla-fira-mono-fonts.noarch
 
 ### Microsoft Core Fonts
 
