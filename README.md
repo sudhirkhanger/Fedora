@@ -236,11 +236,13 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## Apps
 
     sudo dnf install keepassxc emacs
+	
+	sudo snap install wordpress-desktop	
 
 ## Utilities
 
     sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch pandoc \
-    nmap ImageMagick lm_sensors unrar simple-mtpfs
+    nmap ImageMagick lm_sensors unrar simple-mtpfs flameshot
 
 ## KDE Apps
 
@@ -349,7 +351,7 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 ## Write ISO to the usb
 
 	sudo dd bs=4M if=Fedora-KDE-Live-x86_64-28-1.1.iso of=/dev/sda status=progress oflag=direct
-	
+
 ---
 
 * ~/.bashrc
