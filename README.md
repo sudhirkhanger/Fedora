@@ -236,9 +236,8 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## Apps
 
     sudo dnf install keepassxc emacs
+	sudo alternatives --set editor /usr/bin/emacs
 	
-	sudo snap install wordpress-desktop	
-
 ## Utilities
 
     sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch pandoc \
