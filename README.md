@@ -113,7 +113,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ## Developmental
 
-    sudo dnf install git cmake tmux sqlitebrowser
+    sudo dnf install git cmake tmux
     sudo dnf group install "C Development Tools and Libraries"
 
 ## Disable MCE Check
