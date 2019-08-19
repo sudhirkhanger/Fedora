@@ -281,7 +281,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Installation
 
-    sudo dnf install nodejs npm
+    sudo dnf install nodejs npm nodejs-yarn
 
 ### Setup local npm installation
 
