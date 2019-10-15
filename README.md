@@ -248,13 +248,12 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
     sudo dnf install digikam soundkonverter
 	
 ## KDE Utilities
-
     sudo dnf install k3b-extras-freeworld akonadiconsole kdesdk-thumbnailers ffmpegthumbs unar kio_mtp
 
 ## Fonts
 
     sudo dnf install levien-inconsolata-fonts adobe-source-code-pro-fonts.noarch \
-    adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-fonts \
+    adobe-source-sans-pro-fonts.noarch open-sans-fonts.noarch google-noto-emoji-color-fonts.noarch \
 	google-noto-sans-old-turkic-fonts mozilla-fira-mono-fonts.noarch
 
 ### Microsoft Core Fonts
