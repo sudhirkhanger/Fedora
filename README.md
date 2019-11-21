@@ -241,7 +241,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ## Utilities
 
     sudo dnf install youtube-dl htop powertop python3-dnf-plugin-tracer.noarch pandoc \
-    nmap ImageMagick lm_sensors unrar simple-mtpfs flameshot
+    nmap ImageMagick lm_sensors unrar simple-mtpfs flameshot rpmconf
 
 ## KDE Apps
 
