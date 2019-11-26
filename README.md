@@ -350,6 +350,10 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 
 	sudo dd bs=4M if=Fedora-KDE-Live-x86_64-28-1.1.iso of=/dev/sda status=progress oflag=direct
 
+## Install Debug Symbols
+
+	dnf --enablerepo=fedora-debuginfo --enablerepo=updates-debuginfo install <pkg-spec>-debuginfo
+
 ---
 
 * ~/.bashrc
