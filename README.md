@@ -115,6 +115,7 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
     sudo dnf install git cmake tmux
     sudo dnf group install "C Development Tools and Libraries"
+	sudo dnf install zeal // documentation browser
 
 ## Disable MCE Check
 
@@ -353,12 +354,16 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 ## Install Debug Symbols
 
 	dnf --enablerepo=fedora-debuginfo --enablerepo=updates-debuginfo install <pkg-spec>-debuginfo
+	
+## Remove Steam
+
+	dnf remove steam
+	rm -rf ~/.local/share/Steam && rm -rf ~/.steam && rm -ef ~/.factorio
 
 ---
 
 * ~/.bashrc
 * .ssh
-* npm
 * .emacs.d
 * .face.icon
 * .gitconfig
@@ -368,4 +373,11 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 * ~/.local/scripts
 * ~/.gradle/gradle.properties
 * libinput horizontal scroll
-* sdkmann
+* Installations
+  * Snap
+  * Steam
+  * Flatpak
+  * AppImage - Realm browser, IntelliJ Toolbox, Flipper
+  * npm
+  * dnf
+  * sdkman
