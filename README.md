@@ -62,10 +62,6 @@ Source: [1](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux
 #### Virtualization (Only one)
 
     sudo dnf install qemu-kvm libvirt
-
-### Genymotion
-
-	./genymotion-2.2.1_x64.bin
 	
 #### Android SDK Environmental Variable
 
@@ -105,11 +101,11 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 
 ### Gimp
 
-    sudo dnf install gimp.x86_64 gmic-gimp.x86_64 gimp-help.noarch gimp-resynthesizer.x86_64
+    sudo dnf install gimp.x86_64 gmic-gimp.x86_64 gimp-resynthesizer.x86_64
 
 ### Design
 
-    sudo dnf install inkscape.x86_64 pencil
+    sudo dnf install inkscape.x86_64
 
 ## Developmental
 
@@ -183,9 +179,8 @@ Source: [1](https://developer.android.com/studio/troubleshoot.html#linux-librari
 ### Media Codecs
 
     sudo dnf install amrnb amrwb faac faad2 flac gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly \
-    gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-fc gstreamer-plugins-ugly \
-    gstreamer-rtsp lame libdca libmad libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base \
-    gstreamer1-plugins-good gstreamer-plugins-bad gstreamer-plugins-bad-free gstreamer-plugins-base gstreamer-plugins-good
+    gstreamer-ffmpeg gstreamer-plugins-bad-nonfree gstreamer-plugins-espeak gstreamer-plugins-ugly lame libdca libmad \
+    libmatroska x264 xvidcore gstreamer1-plugins-bad-free gstreamer1-plugins-base gstreamer1-plugins-good gstreamer-plugins-bad
 
 ### VA-API
 
@@ -359,7 +354,16 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 
 	dnf remove steam
 	rm -rf ~/.local/share/Steam && rm -rf ~/.steam && rm -ef ~/.factorio
+	
+## Remove Bumblebee
 
+    sudo dnf remove bbswitch-dkms.x86_64 bumblebee.x86_64 bumblebee-release.noarch primus.i686 \
+    primus.x86_64 bumblebee-nonfree-release.noarch bumblebee-nvidia.x86_64
+    
+## Install Nvidia
+
+    sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
+	
 ---
 
 * ~/.bashrc
@@ -373,11 +377,12 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 * ~/.local/scripts
 * ~/.gradle/gradle.properties
 * libinput horizontal scroll
+* Browser extensions & OneTab export
 * Installations
   * Snap
-  * Steam
   * Flatpak
-  * AppImage - Realm browser, IntelliJ Toolbox, Flipper
+  * AppImage - Realm browser, IntelliJ Toolbox (), Flipper
   * npm
   * dnf
   * sdkman
+  * Qt installer
