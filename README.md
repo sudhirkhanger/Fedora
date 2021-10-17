@@ -367,21 +367,17 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 ---
 
 * ~/.bashrc
-* .ssh
-* .emacs.d
-* .face.icon
-* .gitconfig
-* bash history
-* xresources
-* darcula theme - konsole, emacs, possibly kwrite
-* ~/.local/scripts
+* ~/.ssh
+* ~/.config/emacs
+* ~/.bash_history
+* ~/bin
+* ~/.hidden
 * ~/.gradle/gradle.properties
-* libinput horizontal scroll
-* Browser extensions & OneTab export
+* OneTab export
 * Installations
   * Snap
   * Flatpak
-  * AppImage - Realm browser, IntelliJ Toolbox (), Flipper
+  * AppImage - Realm browser, IntelliJ Toolbox, Flipper
   * npm
   * dnf
   * sdkman
