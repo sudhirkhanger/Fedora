@@ -367,9 +367,10 @@ The following guide has been taken from sindresorhus's GitHub [page](https://git
 ---
 
 * ~/.bashrc
+* ~/.bash_history
+* ~/.bash_aliases
 * ~/.ssh
 * ~/.config/emacs
-* ~/.bash_history
 * ~/bin
 * ~/.hidden
 * ~/.gradle/gradle.properties
